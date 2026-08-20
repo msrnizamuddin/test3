@@ -1,19 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import logoImg from "@/imports/home-logo.png";
-import { NAV_LINKS } from "@/data/home";
 
-const SERVICES = [
-  "Seeds & Seedlings",
-  "Pesticides",
-  "Fertilizers",
-  "Polyhouse Farming",
-  "Training Academy",
-];
+import { QUICK_LINKS } from "@/data/home";
+import { ABOUT } from "@/data/home";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0D1C45] text-blue-100">
+    <footer className="bg-[#0D1C45] text-blue-100 border-t border-blue-900">
       <div className="max-w-7xl mx-auto px-4 pt-14 pb-8">
         <div className="grid md:grid-cols-4 gap-8 mb-10">
           <div className="md:col-span-2">
@@ -30,10 +24,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-white font-semibold mb-5">Quick Links</h4>
 
             <ul className="space-y-2">
-              {NAV_LINKS.map((link) => (
+              {QUICK_LINKS.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
@@ -45,17 +39,18 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
           <div>
-            <h4 className="text-white font-semibold mb-4">Services</h4>
+            <h4 className="text-white font-semibold mb-5">About</h4>
 
-            <ul className="space-y-2 text-sm text-blue-300">
-              {SERVICES.map((service) => (
-                <li
-                  key={service}
-                  className="hover:text-red-300 transition-colors"
-                >
-                  {service}
+            <ul className="space-y-2">
+              {ABOUT.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-blue-300 text-sm hover:text-red-300 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>

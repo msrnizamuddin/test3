@@ -4,7 +4,7 @@ import "@fontsource-variable/noto-sans-bengali";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/providers/ThemeProvider";
-
+import { CartProvider } from "@/context/CartContext";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,9 +29,11 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-screen bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100">
         <ThemeProvider>
-          <Navbar />
-          {children}
-          <Footer />
+          <CartProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </CartProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -74,10 +74,10 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-3">
-              <Button href="#products">Explore Products</Button>
+              <Button href="/products">Explore Products</Button>
 
               <Button
-                href="#about"
+                href="/about"
                 variant="outline"
                 className="border-white/30 text-white bg-white/10 hover:bg-white/20 dark:border-white/20 dark:bg-black/20 dark:hover:bg-black/30"
               >

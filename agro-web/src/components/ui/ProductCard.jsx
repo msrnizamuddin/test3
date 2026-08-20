@@ -13,6 +13,14 @@ export default function ProductCard({
 }) {
   const slug = name.toLowerCase().replace(/\s+/g, "-");
 
+  const product = {
+    name,
+    cat,
+    price,
+    img,
+    slug,
+  };
+
   return (
     <div className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-green-200 dark:hover:border-green-900 transition-all duration-300">
       <Link href={`/products/${slug}`} className="block">
@@ -52,7 +60,7 @@ export default function ProductCard({
         <div className="grid grid-cols-2 gap-2">
           <button
             type="button"
-            onClick={() => onBuy?.({ name, cat, price, img, slug })}
+            onClick={() => onBuy?.(product)}
             className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-[#CC2229] hover:bg-[#9e1a1f] text-white text-xs font-semibold transition-colors"
           >
             <Zap size={15} />
@@ -61,7 +69,7 @@ export default function ProductCard({
 
           <button
             type="button"
-            onClick={() => onAddToCart?.({ name, cat, price, img, slug })}
+            onClick={() => onAddToCart?.(product)}
             className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-[#1B5CA8] hover:bg-[#0d3d75] text-white text-xs font-semibold transition-colors"
           >
             <ShoppingCart size={15} />

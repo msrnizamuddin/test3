@@ -3,15 +3,15 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ShoppingCart } from "lucide-react";
 import logoImg from "@/imports/home-logo.png";
 import { NAV_LINKS } from "@/data/home";
 import ThemeToggle from "@/components/common/ThemeToggle";
-
+import { useCart } from "@/context/CartContext";
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
+  const { cartCount } = useCart();
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 60);
@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`border-b-2 border-blue-400 sticky top-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-white dark:bg-gray-950 shadow-lg shadow-blue-900/10"
           : "bg-white/95 dark:bg-gray-950/95 backdrop-blur-sm"
@@ -52,16 +52,33 @@ export default function Navbar() {
             </Link>
           ))}
 
-          <Link
-            href="#contact"
-            className="ml-2 px-5 py-2 bg-[#CC2229] hover:bg-[#9e1a1f] text-white text-sm font-semibold rounded-lg transition-colors shadow-sm"
-          >
-            Get Quote
-          </Link>
+          <div className="ml-2 flex items-center gap-2">
+            <Link
+              href="/login"
+              className="px-4 py-2 text-sm font-semibold text-[#1B5CA8] dark:text-blue-400 border border-[#1B5CA8] dark:border-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/40 transition-colors"
+            >
+              Login
+            </Link>
 
-          <div className="ml-2 flex items-center justify-center">
-            <ThemeToggle />
+            <Link
+              href="/signup"
+              className="px-4 py-2 text-sm font-semibold text-white bg-[#CC2229] hover:bg-[#9e1a1f] rounded-lg shadow-sm transition-colors"
+            >
+              Signup
+            </Link>
           </div>
+          <Link
+            href="/cart"
+            className="relative p-5 rounded-lg text-red-400 dark:text-gray-200 hover:text-[#cc1c22] dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-gray-800 transition-colors"
+            aria-label="Shopping Cart"
+          >
+            <ShoppingCart size={22} />
+            {cartCount > 0 && (
+              <span className="absolute top-2 -right-1 min-w-4 h-4 px-1 flex items-center justify-center rounded-full bg-[#CC2229] text-white text-[10px] font-bold">
+                {cartCount}
+              </span>
+            )}
+          </Link>
         </div>
 
         <button
@@ -86,11 +103,22 @@ export default function Navbar() {
             </Link>
           ))}
 
-          <div className="flex items-center justify-between px-4 py-3 mt-2 border-t border-gray-100 dark:border-gray-800">
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-200">
-              Theme
-            </span>
-            <ThemeToggle />
+          <div className="flex gap-2 px-4 pt-2">
+            <Link
+              href="/login"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex-1 text-center px-4 py-2.5 text-sm font-semibold text-[#1B5CA8] dark:text-blue-400 border border-[#1B5CA8] dark:border-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/40 transition-colors"
+            >
+              Login
+            </Link>
+
+            <Link
+              href="/signup"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex-1 text-center px-4 py-2.5 text-sm font-semibold text-white bg-[#CC2229] hover:bg-[#9e1a1f] rounded-lg shadow-sm transition-colors"
+            >
+              Signup
+            </Link>
           </div>
         </div>
       )}

@@ -1,13 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import SectionHeader from "@/components/common/SectionHeader";
 import ProductCard from "@/components/ui/ProductCard";
-import Button from "@/components/common/Button";
+import { useCart } from "@/context/CartContext";
 import { PRODUCT_CATEGORIES, PRODUCTS } from "@/data/home";
 
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const { addToCart } = useCart();
+  const router = useRouter();
 
   const filteredProducts =
     activeCategory === "All"
@@ -15,11 +18,12 @@ export default function Products() {
       : PRODUCTS.filter((product) => product.cat === activeCategory);
 
   const handleBuy = (product) => {
-    console.log("Buy Now:", product);
+    addToCart(product);
+    router.push("/checkout"); //not yet added.
   };
 
   const handleAddToCart = (product) => {
-    console.log("Add to Cart:", product);
+    addToCart(product);
   };
 
   return (
@@ -63,12 +67,6 @@ export default function Products() {
               onAddToCart={handleAddToCart}
             />
           ))}
-        </div>
-
-        <div className="text-center mt-10">
-          <Button href="#products" variant="secondary">
-            View All Products
-          </Button>
         </div>
       </div>
     </section>

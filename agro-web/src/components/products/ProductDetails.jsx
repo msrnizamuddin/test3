@@ -9,14 +9,17 @@ import {
   ShieldCheck,
   ShoppingCart,
   Truck,
+  Zap,
 } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
 import Button from "@/components/common/Button";
 import { PRODUCTS } from "@/data/home";
+import { useCart } from "@/context/CartContext";
 
 export default function ProductDetails() {
   const router = useRouter();
   const params = useParams();
+  const { addToCart } = useCart();
 
   const slug = params.slug;
 
@@ -50,54 +53,19 @@ export default function ProductDetails() {
   }
 
   const handleAddToCart = () => {
-    const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
+    addToCart({
+      ...product,
+      quantity: 1,
+    });
 
-    const existingProduct = existingCart.find(
-      (item) => item.name === product.name,
-    );
-
-    let updatedCart;
-
-    if (existingProduct) {
-      updatedCart = existingCart.map((item) =>
-        item.name === product.name
-          ? { ...item, quantity: (item.quantity || 1) + 1 }
-          : item,
-      );
-    } else {
-      updatedCart = [
-        ...existingCart,
-        {
-          ...product,
-          quantity: 1,
-        },
-      ];
-    }
-
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-
-    alert("Product added to cart");
+    //alert("Product added to cart");
   };
 
   const handleBuyNow = () => {
-    const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
-
-    const existingProduct = existingCart.find(
-      (item) => item.name === product.name,
-    );
-
-    if (!existingProduct) {
-      localStorage.setItem(
-        "cart",
-        JSON.stringify([
-          ...existingCart,
-          {
-            ...product,
-            quantity: 1,
-          },
-        ]),
-      );
-    }
+    addToCart({
+      ...product,
+      quantity: 1,
+    });
 
     router.push("/checkout");
   };
@@ -184,7 +152,12 @@ export default function ProductDetails() {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button onClick={handleBuyNow}>Buy Now</Button>
+              <Button onClick={handleBuyNow}>
+                <span className="flex items-center gap-2">
+                  <Zap size={17} />
+                  Buy Now
+                </span>
+              </Button>
 
               <Button onClick={handleAddToCart} variant="outline">
                 <span className="flex items-center gap-2">

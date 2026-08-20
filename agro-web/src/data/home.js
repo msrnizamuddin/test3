@@ -15,10 +15,15 @@ import {
 export const NAV_LINKS = [
   { label: "Home", href: "/home" },
   { label: "Products", href: "/products" },
-  { label: "About Us", href: "#about" },
-  { label: "Contact", href: "#contact" },
 ];
-
+export const QUICK_LINKS = [
+  { label: "Home", href: "/home" },
+  { label: "Products", href: "/products" },
+];
+export const ABOUT = [
+  { label: "About Us", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
 export const HERO_SLIDES = [
   {
     img: "https://images.unsplash.com/photo-1642832520839-a30ac9bcadd9?w=1400&h=700&fit=crop&auto=format",

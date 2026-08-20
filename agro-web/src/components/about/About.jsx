@@ -30,11 +30,7 @@ export default function About() {
           </p>
 
           <div className="flex flex-wrap gap-3">
-            <Button href="#services" variant="secondary">
-              Our Services
-            </Button>
-
-            <Button href="#contact" variant="outline">
+            <Button href="/contact" variant="outline">
               Contact Us
             </Button>
           </div>
