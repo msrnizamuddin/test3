@@ -75,7 +75,7 @@ export default function ProductDetails() {
       <section className="max-w-7xl mx-auto px-4 py-8 md:py-12">
         <Link
           href="/products"
-          className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-[#CC2229] dark:hover:text-red-400 transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-[#F97316] dark:hover:text-orange-400 transition-colors mb-8"
         >
           <ArrowLeft size={18} />
           Back to Products
@@ -92,14 +92,14 @@ export default function ProductDetails() {
                 className="object-cover"
               />
 
-              <span className="absolute top-5 left-5 bg-[#CC2229] text-white text-xs font-bold px-3 py-1.5 rounded-full">
+              <span className="absolute top-5 left-5 bg-[#F97316] text-white text-xs font-bold px-3 py-1.5 rounded-full">
                 {product.cat}
               </span>
             </div>
           </div>
 
           <div className="flex flex-col justify-center">
-            <span className="text-sm font-semibold uppercase tracking-widest text-[#1B5CA8] dark:text-blue-300 mb-3">
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#16A34A] dark:text-green-300 mb-3">
               {product.cat}
             </span>
 
@@ -108,7 +108,7 @@ export default function ProductDetails() {
             </h1>
 
             <div className="mt-5">
-              <span className="text-2xl font-bold text-[#1B5CA8] dark:text-blue-400">
+              <span className="text-2xl font-bold text-[#16A34A] dark:text-green-400">
                 {product.price}
               </span>
             </div>
@@ -122,7 +122,7 @@ export default function ProductDetails() {
             <div className="grid sm:grid-cols-3 gap-3 mt-8">
               <div className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800">
                 <ShieldCheck
-                  className="text-[#1B5CA8] dark:text-blue-400"
+                  className="text-[#16A34A] dark:text-green-400"
                   size={22}
                 />
                 <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
@@ -132,7 +132,7 @@ export default function ProductDetails() {
 
               <div className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800">
                 <Package
-                  className="text-[#1B5CA8] dark:text-blue-400"
+                  className="text-[#16A34A] dark:text-green-400"
                   size={22}
                 />
                 <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
@@ -142,7 +142,7 @@ export default function ProductDetails() {
 
               <div className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800">
                 <Truck
-                  className="text-[#1B5CA8] dark:text-blue-400"
+                  className="text-[#16A34A] dark:text-green-400"
                   size={22}
                 />
                 <span className="text-xs font-medium text-gray-700 dark:text-gray-300">

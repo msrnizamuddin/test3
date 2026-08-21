@@ -22,7 +22,7 @@ export default function CartItem({ item }) {
           {item.cat}
         </p>
 
-        <p className="font-bold text-[#1B5CA8] dark:text-blue-400 mt-2">
+        <p className="font-bold text-[#16A34A] dark:text-green-400 mt-2">
           {item.price}
         </p>
 
@@ -49,7 +49,7 @@ export default function CartItem({ item }) {
 
           <button
             onClick={() => removeFromCart(item.name)}
-            className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-950/30 rounded-lg"
+            className="p-2 text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-950/30 rounded-lg"
           >
             <Trash2 size={18} />
           </button>

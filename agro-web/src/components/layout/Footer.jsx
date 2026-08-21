@@ -24,14 +24,14 @@ import { ABOUT } from "@/data/home";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-linear-to-b from-[#0D1C45] to-[#050b1c] text-blue-100 border-t border-white/5">
+    <footer className="relative overflow-hidden bg-linear-to-b from-[#052e1f] to-[#02140d] text-green-100 border-t border-white/5">
       <div
-        className="pointer-events-none absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[#1B5CA8]/20 blur-3xl"
+        className="pointer-events-none absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[#16A34A]/20 blur-3xl"
         aria-hidden
       />
 
       <div
-        className="pointer-events-none absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-[#CC2229]/10 blur-3xl"
+        className="pointer-events-none absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-[#F97316]/10 blur-3xl"
         aria-hidden
       />
 
@@ -44,7 +44,7 @@ export default function Footer() {
               className="h-10 w-auto object-contain brightness-0 invert mb-4"
             />
 
-            <p className="text-blue-200 text-sm leading-relaxed max-w-sm mb-6">
+            <p className="text-green-200 text-sm leading-relaxed max-w-sm mb-6">
               Empowering Bangladeshi farmers with quality agro products, modern
               farming techniques, and reliable support since 2020.
             </p>
@@ -53,7 +53,7 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="Facebook"
-                className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#CC2229] text-blue-200 hover:text-white transition-colors"
+                className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#F97316] text-green-200 hover:text-white transition-colors"
               >
                 <FacebookIcon width={16} height={16} />
               </a>
@@ -61,7 +61,7 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="YouTube"
-                className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#CC2229] text-blue-200 hover:text-white transition-colors"
+                className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#F97316] text-green-200 hover:text-white transition-colors"
               >
                 <YoutubeIcon width={16} height={16} />
               </a>
@@ -78,7 +78,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-blue-300 text-sm hover:text-red-300 hover:translate-x-1 inline-block transition-all"
+                    className="text-green-300 text-sm hover:text-orange-300 hover:translate-x-1 inline-block transition-all"
                   >
                     {link.label}
                   </Link>
@@ -89,7 +89,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-blue-300 text-sm hover:text-red-300 hover:translate-x-1 inline-block transition-all"
+                    className="text-green-300 text-sm hover:text-orange-300 hover:translate-x-1 inline-block transition-all"
                   >
                     {link.label}
                   </Link>
@@ -104,25 +104,25 @@ export default function Footer() {
             </h4>
 
             <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2.5 text-blue-300">
-                <Phone size={15} className="text-red-300 shrink-0" />
+              <li className="flex items-center gap-2.5 text-green-300">
+                <Phone size={15} className="text-orange-300 shrink-0" />
                 +880 1700-000000
               </li>
 
-              <li className="flex items-center gap-2.5 text-blue-300">
-                <Mail size={15} className="text-red-300 shrink-0" />
+              <li className="flex items-center gap-2.5 text-green-300">
+                <Mail size={15} className="text-orange-300 shrink-0" />
                 info@agro1bd.com
               </li>
 
-              <li className="flex items-center gap-2.5 text-blue-300">
-                <MapPin size={15} className="text-red-300 shrink-0" />
+              <li className="flex items-center gap-2.5 text-green-300">
+                <MapPin size={15} className="text-orange-300 shrink-0" />
                 Dhaka, Bangladesh
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-blue-400">
+        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-green-400">
           <p>© 2024 Agro1 Global Agro Ltd. All rights reserved.</p>
 
           <p>Made with 🌱 for Bangladesh&apos;s farmers</p>

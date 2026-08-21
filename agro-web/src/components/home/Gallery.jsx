@@ -20,8 +20,8 @@ export default function Gallery() {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
 
-              <div className="absolute inset-0 bg-linear-to-t from-[#0D1C45]/70 via-[#0D1C45]/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-3">
-                <span className="w-9 h-9 flex items-center justify-center rounded-full bg-white/90 text-[#1B5CA8] translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+              <div className="absolute inset-0 bg-linear-to-t from-[#052e1f]/70 via-[#052e1f]/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-3">
+                <span className="w-9 h-9 flex items-center justify-center rounded-full bg-white/90 text-[#16A34A] translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                   <Expand size={16} />
                 </span>
               </div>

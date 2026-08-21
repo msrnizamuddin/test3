@@ -54,19 +54,19 @@ export default function Hero() {
             className="w-full h-full object-cover scale-105"
           />
 
-          <div className="absolute inset-0 bg-linear-to-r from-[#0D1C45]/95 via-[#0D1C45]/70 to-black/30 dark:from-[#050b1c]/95 dark:via-[#0D1C45]/75 dark:to-black/40" />
+          <div className="absolute inset-0 bg-linear-to-r from-[#052e1f]/95 via-[#052e1f]/70 to-black/30 dark:from-[#02140d]/95 dark:via-[#052e1f]/75 dark:to-black/40" />
         </div>
       ))}
 
       <div
-        className="pointer-events-none absolute top-1/4 right-[10%] w-72 h-72 rounded-full bg-[#CC2229]/20 blur-3xl animate-float-slow"
+        className="pointer-events-none absolute top-1/4 right-[10%] w-72 h-72 rounded-full bg-[#F97316]/20 blur-3xl animate-float-slow"
         aria-hidden
       />
 
       <div className="relative z-10 h-full flex items-center">
         <div className="max-w-7xl mx-auto px-6 w-full">
           <div key={slide} className="max-w-xl animate-fade-in-up">
-            <span className="inline-flex items-center gap-2 bg-linear-to-r from-[#CC2229] to-[#a3191f] text-white text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-5 shadow-lg shadow-red-900/30">
+            <span className="inline-flex items-center gap-2 bg-linear-to-r from-[#F97316] to-[#c2410c] text-white text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-5 shadow-lg shadow-orange-900/30">
               <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
               {currentSlide.tag}
             </span>
@@ -75,7 +75,7 @@ export default function Hero() {
               {currentSlide.title}
             </h1>
 
-            <p className="text-blue-100 dark:text-gray-200 text-lg leading-relaxed mb-8">
+            <p className="text-green-100 dark:text-gray-200 text-lg leading-relaxed mb-8">
               {currentSlide.subtitle}
             </p>
 
@@ -101,7 +101,7 @@ export default function Hero() {
             onClick={() => goToSlide(index)}
             className={`rounded-full transition-all duration-300 ${
               index === slide
-                ? "w-8 h-2.5 bg-linear-to-r from-[#CC2229] to-[#a3191f]"
+                ? "w-8 h-2.5 bg-linear-to-r from-[#F97316] to-[#c2410c]"
                 : "w-2.5 h-2.5 bg-white/50 hover:bg-white/80 dark:bg-white/30 dark:hover:bg-white/60"
             }`}
             aria-label={`Go to slide ${index + 1}`}

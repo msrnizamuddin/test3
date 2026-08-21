@@ -70,7 +70,7 @@ export default function Contact() {
     >
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
         <div>
-          <span className="inline-flex font-semibold text-xs uppercase tracking-[0.2em] text-[#CC2229] bg-[#CC2229]/10 dark:text-red-300 dark:bg-red-500/10 px-3 py-1 rounded-full">
+          <span className="inline-flex font-semibold text-xs uppercase tracking-[0.2em] text-[#F97316] bg-[#F97316]/10 dark:text-orange-300 dark:bg-orange-500/10 px-3 py-1 rounded-full">
             যোগাযোগ করুন
           </span>
 
@@ -89,7 +89,7 @@ export default function Contact() {
                 key={label}
                 className="group flex items-start gap-4 p-3 -m-3 rounded-xl hover:bg-white dark:hover:bg-gray-900 transition-colors"
               >
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-linear-to-br from-[#1B5CA8]/15 to-[#1B5CA8]/5 text-[#1B5CA8] dark:from-blue-500/20 dark:to-blue-500/5 dark:text-blue-400 group-hover:scale-110 transition-transform">
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-linear-to-br from-[#16A34A]/15 to-[#16A34A]/5 text-[#16A34A] dark:from-green-500/20 dark:to-green-500/5 dark:text-green-400 group-hover:scale-110 transition-transform">
                   <Icon size={20} />
                 </div>
 
@@ -109,7 +109,7 @@ export default function Contact() {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl shadow-blue-900/5 border border-gray-100 dark:border-gray-800"
+          className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl shadow-green-900/5 border border-gray-100 dark:border-gray-800"
         >
           <h3 className="font-bold text-gray-900 dark:text-white text-xl mb-6">
             Send a Message
@@ -149,11 +149,11 @@ export default function Contact() {
                 rows={4}
                 placeholder="Tell us about your farming needs..."
                 {...register("message")}
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 text-sm focus:outline-none focus:border-[#1B5CA8] dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/40 transition-colors resize-none"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 text-sm focus:outline-none focus:border-[#16A34A] dark:focus:border-green-400 focus:ring-2 focus:ring-green-100 dark:focus:ring-green-900/40 transition-colors resize-none"
               />
 
               {errors.message && (
-                <p className="text-red-500 dark:text-red-400 text-xs mt-1">
+                <p className="text-rose-500 dark:text-rose-400 text-xs mt-1">
                   {errors.message.message}
                 </p>
               )}
@@ -161,7 +161,7 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="w-full py-3.5 bg-linear-to-r from-[#CC2229] to-[#a3191f] hover:brightness-110 text-white font-semibold rounded-xl transition-all shadow-lg shadow-red-900/20 hover:-translate-y-0.5"
+              className="w-full py-3.5 bg-linear-to-r from-[#F97316] to-[#c2410c] hover:brightness-110 text-white font-semibold rounded-xl transition-all shadow-lg shadow-orange-900/20 hover:-translate-y-0.5"
             >
               Send Message
             </button>

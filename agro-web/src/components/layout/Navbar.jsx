@@ -28,7 +28,7 @@ export default function Navbar() {
     <nav
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/80 dark:bg-gray-950/80 backdrop-blur-xl shadow-lg shadow-blue-900/10 border-b border-gray-200/60 dark:border-white/10"
+          ? "bg-white/80 dark:bg-gray-950/80 backdrop-blur-xl shadow-lg shadow-green-900/10 border-b border-gray-200/60 dark:border-white/10"
           : "bg-white/60 dark:bg-gray-950/60 backdrop-blur-md border-b border-transparent"
       }`}
     >
@@ -46,10 +46,10 @@ export default function Navbar() {
             <Link
               key={link.label}
               href={link.href}
-              className="relative px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-[#CC2229] dark:hover:text-red-400 rounded-lg transition-all group"
+              className="relative px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-[#F97316] dark:hover:text-orange-400 rounded-lg transition-all group"
             >
               {link.label}
-              <span className="absolute left-4 right-4 -bottom-0.5 h-0.5 bg-linear-to-r from-[#1B5CA8] to-[#CC2229] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
+              <span className="absolute left-4 right-4 -bottom-0.5 h-0.5 bg-linear-to-r from-[#16A34A] to-[#F97316] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
             </Link>
           ))}
 
@@ -58,26 +58,26 @@ export default function Navbar() {
 
             <Link
               href="/login"
-              className="px-4 py-2 text-sm font-semibold text-[#1B5CA8] dark:text-blue-400 border border-[#1B5CA8]/40 dark:border-blue-400/40 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:border-[#1B5CA8] transition-colors"
+              className="px-4 py-2 text-sm font-semibold text-[#16A34A] dark:text-green-400 border border-[#16A34A]/40 dark:border-green-400/40 rounded-lg hover:bg-green-50 dark:hover:bg-green-950/40 hover:border-[#16A34A] transition-colors"
             >
               Login
             </Link>
 
             <Link
               href="/signup"
-              className="px-4 py-2 text-sm font-semibold text-white bg-linear-to-r from-[#CC2229] to-[#a3191f] hover:brightness-110 rounded-lg shadow-md shadow-red-900/20 transition-all hover:-translate-y-0.5"
+              className="px-4 py-2 text-sm font-semibold text-white bg-linear-to-r from-[#F97316] to-[#c2410c] hover:brightness-110 rounded-lg shadow-md shadow-orange-900/20 transition-all hover:-translate-y-0.5"
             >
               Signup
             </Link>
           </div>
           <Link
             href="/cart"
-            className="relative ml-1 p-2.5 rounded-xl text-gray-600 dark:text-gray-200 hover:text-[#CC2229] dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-white/5 transition-colors"
+            className="relative ml-1 p-2.5 rounded-xl text-gray-600 dark:text-gray-200 hover:text-[#F97316] dark:hover:text-orange-400 hover:bg-orange-50 dark:hover:bg-white/5 transition-colors"
             aria-label="Shopping Cart"
           >
             <ShoppingCart size={22} />
             {cartCount > 0 && (
-              <span className="absolute top-1 right-1 min-w-4 h-4 px-1 flex items-center justify-center rounded-full bg-[#CC2229] text-white text-[10px] font-bold shadow-sm animate-pulse">
+              <span className="absolute top-1 right-1 min-w-4 h-4 px-1 flex items-center justify-center rounded-full bg-[#F97316] text-white text-[10px] font-bold shadow-sm animate-pulse">
                 {cartCount}
               </span>
             )}
@@ -88,7 +88,7 @@ export default function Navbar() {
           <ThemeToggle />
 
           <button
-            className="p-2 rounded-lg text-gray-600 dark:text-gray-200 hover:bg-red-50 dark:hover:bg-white/5"
+            className="p-2 rounded-lg text-gray-600 dark:text-gray-200 hover:bg-orange-50 dark:hover:bg-white/5"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
             aria-label="Toggle menu"
           >
@@ -108,7 +108,7 @@ export default function Navbar() {
               key={link.label}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-[#CC2229] dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-white/5 rounded-lg"
+              className="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-[#F97316] dark:hover:text-orange-400 hover:bg-orange-50 dark:hover:bg-white/5 rounded-lg"
             >
               {link.label}
             </Link>
@@ -118,7 +118,7 @@ export default function Navbar() {
             <Link
               href="/login"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex-1 text-center px-4 py-2.5 text-sm font-semibold text-[#1B5CA8] dark:text-blue-400 border border-[#1B5CA8] dark:border-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/40 transition-colors"
+              className="flex-1 text-center px-4 py-2.5 text-sm font-semibold text-[#16A34A] dark:text-green-400 border border-[#16A34A] dark:border-green-400 rounded-lg hover:bg-green-50 dark:hover:bg-green-950/40 transition-colors"
             >
               Login
             </Link>
@@ -126,7 +126,7 @@ export default function Navbar() {
             <Link
               href="/signup"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex-1 text-center px-4 py-2.5 text-sm font-semibold text-white bg-linear-to-r from-[#CC2229] to-[#a3191f] rounded-lg shadow-sm transition-colors"
+              className="flex-1 text-center px-4 py-2.5 text-sm font-semibold text-white bg-linear-to-r from-[#F97316] to-[#c2410c] rounded-lg shadow-sm transition-colors"
             >
               Signup
             </Link>

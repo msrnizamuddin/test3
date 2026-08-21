@@ -76,10 +76,10 @@ export default function CartPage() {
       <main className="min-h-screen bg-white dark:bg-gray-950 transition-colors">
         <section className="max-w-7xl mx-auto px-4 py-16 md:py-24">
           <div className="max-w-lg mx-auto text-center">
-            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-blue-50 dark:bg-blue-950/40 flex items-center justify-center">
+            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-green-50 dark:bg-green-950/40 flex items-center justify-center">
               <ShoppingBag
                 size={36}
-                className="text-[#1B5CA8] dark:text-blue-400"
+                className="text-[#16A34A] dark:text-green-400"
               />
             </div>
 
@@ -93,7 +93,7 @@ export default function CartPage() {
 
             <Link
               href="/products"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#CC2229] hover:bg-[#9e1a1f] text-white font-semibold transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#F97316] hover:bg-[#c2410c] text-white font-semibold transition-colors"
             >
               <ShoppingBag size={18} />
               Browse Products
@@ -109,7 +109,7 @@ export default function CartPage() {
       <section className="max-w-7xl mx-auto px-4 py-8 md:py-12">
         <Link
           href="/products"
-          className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-[#CC2229] dark:hover:text-red-400 transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-[#F97316] dark:hover:text-orange-400 transition-colors mb-8"
         >
           <ArrowLeft size={18} />
           Continue Shopping
@@ -129,7 +129,7 @@ export default function CartPage() {
 
           <button
             onClick={clearCart}
-            className="text-sm font-medium text-red-500 hover:text-red-700 dark:hover:text-red-400 transition-colors"
+            className="text-sm font-medium text-rose-500 hover:text-rose-700 dark:hover:text-rose-400 transition-colors"
           >
             Clear Cart
           </button>
@@ -158,13 +158,13 @@ export default function CartPage() {
                   <div className="flex-1 min-w-0">
                     <div className="flex justify-between gap-4">
                       <div>
-                        <span className="text-xs font-semibold uppercase tracking-wider text-[#1B5CA8] dark:text-blue-400">
+                        <span className="text-xs font-semibold uppercase tracking-wider text-[#16A34A] dark:text-green-400">
                           {item.cat}
                         </span>
 
                         <Link
                           href={`/products/${item.slug || item.name.toLowerCase().replace(/\s+/g, "-")}`}
-                          className="block mt-1 text-base md:text-lg font-semibold text-gray-900 dark:text-white hover:text-[#CC2229] dark:hover:text-red-400 transition-colors"
+                          className="block mt-1 text-base md:text-lg font-semibold text-gray-900 dark:text-white hover:text-[#F97316] dark:hover:text-orange-400 transition-colors"
                         >
                           {item.name}
                         </Link>
@@ -172,7 +172,7 @@ export default function CartPage() {
 
                       <button
                         onClick={() => removeItem(item.name)}
-                        className="shrink-0 p-2 rounded-lg text-gray-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-950/30 transition-colors"
+                        className="shrink-0 p-2 rounded-lg text-gray-400 hover:text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-950/30 transition-colors"
                         aria-label={`Remove ${item.name}`}
                       >
                         <Trash2 size={18} />
@@ -180,7 +180,7 @@ export default function CartPage() {
                     </div>
 
                     <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
-                      <span className="font-bold text-[#1B5CA8] dark:text-blue-400">
+                      <span className="font-bold text-[#16A34A] dark:text-green-400">
                         {item.price}
                       </span>
 
@@ -241,7 +241,7 @@ export default function CartPage() {
                   Total
                 </span>
 
-                <span className="text-xl font-bold text-[#1B5CA8] dark:text-blue-400">
+                <span className="text-xl font-bold text-[#16A34A] dark:text-green-400">
                   ৳{total.toLocaleString()}
                 </span>
               </div>
@@ -249,7 +249,7 @@ export default function CartPage() {
 
             <Link
               href="#" //not yet made
-              className="mt-6 w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#CC2229] hover:bg-[#9e1a1f] text-white font-semibold transition-colors shadow-sm"
+              className="mt-6 w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#F97316] hover:bg-[#c2410c] text-white font-semibold transition-colors shadow-sm"
             >
               Proceed to Checkout
               <ArrowLeft size={18} className="rotate-180" />
@@ -257,7 +257,7 @@ export default function CartPage() {
 
             <Link
               href="/products"
-              className="mt-3 w-full flex items-center justify-center px-6 py-3 rounded-xl border-2 border-[#1B5CA8] text-[#1B5CA8] dark:text-blue-400 dark:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/40 font-semibold transition-colors"
+              className="mt-3 w-full flex items-center justify-center px-6 py-3 rounded-xl border-2 border-[#16A34A] text-[#16A34A] dark:text-green-400 dark:border-green-400 hover:bg-green-50 dark:hover:bg-green-950/40 font-semibold transition-colors"
             >
               Continue Shopping
             </Link>

@@ -18,14 +18,14 @@ function YoutubeIcon(props) {
 
 export default function TopBar() {
   return (
-    <div className="bg-linear-to-r from-[#0D1C45] via-[#0f2354] to-[#0D1C45] text-blue-100 text-xs sm:text-sm py-2 px-4 flex flex-wrap items-center justify-between gap-2 border-b border-white/5">
+    <div className="bg-linear-to-r from-[#052e1f] via-[#0a3d26] to-[#052e1f] text-green-100 text-xs sm:text-sm py-2 px-4 flex flex-wrap items-center justify-between gap-2 border-b border-white/5">
       <div className="flex items-center gap-4">
         <span className="flex items-center gap-1.5">
-          <Phone size={13} className="text-red-300" /> +880 1700-000000
+          <Phone size={13} className="text-orange-300" /> +880 1700-000000
         </span>
 
         <span className="hidden sm:flex items-center gap-1.5">
-          <Mail size={13} className="text-red-300" /> info@aragro.com
+          <Mail size={13} className="text-orange-300" /> info@aragro.com
         </span>
       </div>
 
@@ -33,7 +33,7 @@ export default function TopBar() {
         <a
           href="#"
           aria-label="Facebook"
-          className="p-1.5 rounded-full hover:bg-white/10 hover:text-red-300 transition-colors"
+          className="p-1.5 rounded-full hover:bg-white/10 hover:text-orange-300 transition-colors"
         >
           <FacebookIcon width={14} height={14} />
         </a>
@@ -41,14 +41,14 @@ export default function TopBar() {
         <a
           href="#"
           aria-label="YouTube"
-          className="p-1.5 rounded-full hover:bg-white/10 hover:text-red-300 transition-colors"
+          className="p-1.5 rounded-full hover:bg-white/10 hover:text-orange-300 transition-colors"
         >
           <YoutubeIcon width={14} height={14} />
         </a>
 
         <span className="opacity-30">|</span>
 
-        <a href="#" className="hover:text-red-300 transition-colors font-medium">
+        <a href="#" className="hover:text-orange-300 transition-colors font-medium">
           Hotline: 16XXX
         </a>
       </div>

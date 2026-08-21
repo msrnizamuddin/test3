@@ -8,7 +8,7 @@ export default function About() {
     >
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <span className="inline-flex font-semibold text-xs uppercase tracking-[0.2em] text-[#1B5CA8] bg-[#1B5CA8]/10 dark:text-blue-300 dark:bg-blue-500/10 px-3 py-1 rounded-full">
+          <span className="inline-flex font-semibold text-xs uppercase tracking-[0.2em] text-[#16A34A] bg-[#16A34A]/10 dark:text-green-300 dark:bg-green-500/10 px-3 py-1 rounded-full">
             আমাদের পরিচয়
           </span>
 
@@ -42,7 +42,7 @@ export default function About() {
         </div>
 
         <div className="relative">
-          <div className="rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/10 ring-1 ring-black/5 dark:ring-white/10">
+          <div className="rounded-2xl overflow-hidden shadow-2xl shadow-green-900/10 ring-1 ring-black/5 dark:ring-white/10">
             <img
               src="https://images.unsplash.com/photo-1634962458589-30d58befcab2?w=700&h=500&fit=crop&auto=format"
               alt="Agro1 farmland"
@@ -50,7 +50,7 @@ export default function About() {
             />
           </div>
 
-          <div className="absolute -bottom-6 -left-6 bg-linear-to-br from-[#CC2229] to-[#a3191f] text-white rounded-2xl p-5 shadow-xl shadow-red-900/30">
+          <div className="absolute -bottom-6 -left-6 bg-linear-to-br from-[#F97316] to-[#c2410c] text-white rounded-2xl p-5 shadow-xl shadow-orange-900/30">
             <div className="text-3xl font-bold">২০২০</div>
 
             <div className="text-sm font-medium opacity-90">
@@ -59,7 +59,7 @@ export default function About() {
           </div>
 
           <div className="absolute -top-4 -right-4 bg-white dark:bg-gray-900 rounded-xl p-4 shadow-lg border border-gray-100 dark:border-gray-800">
-            <div className="font-bold text-lg text-[#1B5CA8] dark:text-blue-400">
+            <div className="font-bold text-lg text-[#16A34A] dark:text-green-400">
               🏆 #1
             </div>
 

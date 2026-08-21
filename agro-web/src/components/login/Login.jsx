@@ -9,17 +9,17 @@ export default function Login() {
   return (
     <main className="relative min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center px-4 py-12 overflow-hidden transition-colors">
       <div
-        className="pointer-events-none absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[#1B5CA8]/15 blur-3xl"
+        className="pointer-events-none absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[#16A34A]/15 blur-3xl"
         aria-hidden
       />
 
       <div
-        className="pointer-events-none absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-[#CC2229]/10 blur-3xl"
+        className="pointer-events-none absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-[#F97316]/10 blur-3xl"
         aria-hidden
       />
 
       <div className="relative w-full max-w-md animate-fade-in-up">
-        <div className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl border border-gray-200/70 dark:border-gray-800 rounded-3xl shadow-2xl shadow-blue-900/10 p-8">
+        <div className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl border border-gray-200/70 dark:border-gray-800 rounded-3xl shadow-2xl shadow-green-900/10 p-8">
           <div className="flex justify-center mb-6">
             <Image
               src={logoImg}
@@ -53,7 +53,7 @@ export default function Login() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-[#1B5CA8] focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-950 transition"
+                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-[#16A34A] focus:ring-2 focus:ring-green-100 dark:focus:ring-green-950 transition"
                 />
               </div>
             </div>
@@ -66,7 +66,7 @@ export default function Login() {
 
                 <Link
                   href="#"
-                  className="text-xs font-medium text-[#1B5CA8] dark:text-blue-400 hover:text-[#CC2229]"
+                  className="text-xs font-medium text-[#16A34A] dark:text-green-400 hover:text-[#F97316]"
                 >
                   Forgot Password?
                 </Link>
@@ -81,14 +81,14 @@ export default function Login() {
                 <input
                   type="password"
                   placeholder="Enter your password"
-                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-[#1B5CA8] focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-950 transition"
+                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-[#16A34A] focus:ring-2 focus:ring-green-100 dark:focus:ring-green-950 transition"
                 />
               </div>
             </div>
 
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-linear-to-r from-[#CC2229] to-[#a3191f] hover:brightness-110 text-white font-semibold transition-all shadow-lg shadow-red-900/20 hover:-translate-y-0.5"
+              className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-linear-to-r from-[#F97316] to-[#c2410c] hover:brightness-110 text-white font-semibold transition-all shadow-lg shadow-orange-900/20 hover:-translate-y-0.5"
             >
               Login
               <ArrowRight size={18} />
@@ -107,7 +107,7 @@ export default function Login() {
             Don't have an account?{" "}
             <Link
               href="/signup"
-              className="font-semibold text-[#1B5CA8] dark:text-blue-400 hover:text-[#CC2229] dark:hover:text-red-400"
+              className="font-semibold text-[#16A34A] dark:text-green-400 hover:text-[#F97316] dark:hover:text-orange-400"
             >
               Create Account
             </Link>

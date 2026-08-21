@@ -10,8 +10,8 @@ export default function SectionHeader({
       <span
         className={`inline-flex items-center gap-2 font-semibold text-xs uppercase tracking-[0.2em] px-3 py-1 rounded-full ${
           dark
-            ? "text-blue-200 bg-white/10"
-            : "text-[#1B5CA8] bg-[#1B5CA8]/10 dark:text-blue-300 dark:bg-blue-500/10"
+            ? "text-green-200 bg-white/10"
+            : "text-[#16A34A] bg-[#16A34A]/10 dark:text-green-300 dark:bg-green-500/10"
         }`}
       >
         {eyebrow}
@@ -25,12 +25,12 @@ export default function SectionHeader({
         {title}
       </h2>
 
-      <div className="mt-4 mx-auto h-1 w-16 rounded-full bg-linear-to-r from-[#1B5CA8] to-[#CC2229]" />
+      <div className="mt-4 mx-auto h-1 w-16 rounded-full bg-linear-to-r from-[#16A34A] to-[#F97316]" />
 
       {description && (
         <p
           className={`mt-4 max-w-xl mx-auto leading-relaxed ${
-            dark ? "text-blue-200" : "text-gray-500 dark:text-blue-200"
+            dark ? "text-green-200" : "text-gray-500 dark:text-green-200"
           }`}
         >
           {description}

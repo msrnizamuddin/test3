@@ -6,10 +6,10 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative py-20 px-4 bg-linear-to-b from-[#0D1C45] to-[#0a1636] text-white overflow-hidden"
+      className="relative py-20 px-4 bg-linear-to-b from-[#052e1f] to-[#031b12] text-white overflow-hidden"
     >
       <div
-        className="pointer-events-none absolute top-0 left-1/4 w-96 h-96 rounded-full bg-[#1B5CA8]/20 blur-3xl"
+        className="pointer-events-none absolute top-0 left-1/4 w-96 h-96 rounded-full bg-[#16A34A]/20 blur-3xl"
         aria-hidden
       />
 
