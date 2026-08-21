@@ -46,10 +46,10 @@ export default function Products() {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
+                className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
                   active
-                    ? "bg-[#1B5CA8] text-white shadow-md"
-                    : "bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:border-red-400 hover:text-red-700 dark:hover:border-red-400 dark:hover:text-red-400"
+                    ? "bg-linear-to-r from-[#1B5CA8] to-[#123f73] text-white shadow-lg shadow-blue-900/25 scale-105"
+                    : "bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:border-[#CC2229]/50 hover:text-[#CC2229] dark:hover:border-red-400 dark:hover:text-red-400 hover:-translate-y-0.5"
                 }`}
               >
                 {category}

@@ -7,9 +7,19 @@ import logoImg from "@/imports/home-logo.png";
 
 export default function Login() {
   return (
-    <main className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center px-4 py-12 transition-colors">
-      <div className="w-full max-w-md">
-        <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl shadow-xl p-8">
+    <main className="relative min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center px-4 py-12 overflow-hidden transition-colors">
+      <div
+        className="pointer-events-none absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[#1B5CA8]/15 blur-3xl"
+        aria-hidden
+      />
+
+      <div
+        className="pointer-events-none absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-[#CC2229]/10 blur-3xl"
+        aria-hidden
+      />
+
+      <div className="relative w-full max-w-md animate-fade-in-up">
+        <div className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl border border-gray-200/70 dark:border-gray-800 rounded-3xl shadow-2xl shadow-blue-900/10 p-8">
           <div className="flex justify-center mb-6">
             <Image
               src={logoImg}
@@ -78,7 +88,7 @@ export default function Login() {
 
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#CC2229] hover:bg-[#9e1a1f] text-white font-semibold transition-colors shadow-sm"
+              className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-linear-to-r from-[#CC2229] to-[#a3191f] hover:brightness-110 text-white font-semibold transition-all shadow-lg shadow-red-900/20 hover:-translate-y-0.5"
             >
               Login
               <ArrowRight size={18} />

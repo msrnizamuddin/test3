@@ -11,18 +11,20 @@ export default function Button({
 }) {
   const variants = {
     primary:
-      "bg-[#CC2229] text-white hover:bg-[#9e1a1f] dark:bg-[#CC2229] dark:hover:bg-[#e52b32]",
+      "bg-linear-to-r from-[#CC2229] to-[#a3191f] text-white hover:brightness-110 shadow-lg shadow-red-900/20 dark:shadow-red-950/40",
     secondary:
-      "bg-[#1B5CA8] text-white hover:bg-[#0d3d75] dark:bg-[#2874c7] dark:hover:bg-[#1B5CA8]",
+      "bg-linear-to-r from-[#1B5CA8] to-[#123f73] text-white hover:brightness-110 shadow-lg shadow-blue-900/20 dark:shadow-blue-950/40",
     outline:
       "border-2 border-[#CC2229] text-[#CC2229] hover:bg-red-50 dark:border-[#ef4444] dark:text-red-400 dark:hover:bg-red-950/40",
   };
 
   const classes = `
     inline-flex items-center justify-center
-    px-6 py-3 font-semibold rounded-lg
-    transition-colors shadow-sm
-    disabled:opacity-50 disabled:cursor-not-allowed
+    px-6 py-3 font-semibold rounded-xl
+    transition-all duration-300 ease-out
+    hover:-translate-y-0.5 active:translate-y-0
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#1B5CA8] dark:focus-visible:ring-offset-gray-950
+    disabled:opacity-50 disabled:cursor-not-allowed disabled:translate-y-0
     ${variants[variant]}
     ${className}
   `;

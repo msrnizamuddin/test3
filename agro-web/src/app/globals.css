@@ -7,10 +7,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --brand-navy: #0d1c45;
+  --brand-red: #cc2229;
+  --brand-blue: #1b5ca8;
 }
 
 .dark {
-  --background: #0a0a0a;
+  --background: #05070f;
   --foreground: #ededed;
 }
 
@@ -21,8 +24,97 @@
   --font-mono: var(--font-geist-mono);
 }
 
+* {
+  scrollbar-color: var(--brand-blue) transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Noto Sans Bengali", var(--font-geist-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--brand-red);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-blue);
+  border-radius: 999px;
+  border: 2px solid var(--background);
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-16px) translateX(8px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.text-gradient-brand {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-red));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-grid-fade {
+  background-image:
+    linear-gradient(to bottom, transparent, var(--background) 90%),
+    linear-gradient(
+      to right,
+      rgba(27, 92, 168, 0.12) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(27, 92, 168, 0.12) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    32px 32px,
+    32px 32px;
 }

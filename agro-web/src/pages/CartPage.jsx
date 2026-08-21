@@ -15,8 +15,8 @@ export default function CartPage() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-950 transition-colors">
       <section className="max-w-7xl mx-auto px-4 py-10 md:py-14">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
-          Shopping Cart
+        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-8 tracking-tight">
+          Shopping <span className="text-gradient-brand">Cart</span>
         </h1>
 
         <div className="grid lg:grid-cols-3 gap-8">

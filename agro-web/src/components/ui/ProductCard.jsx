@@ -22,16 +22,18 @@ export default function ProductCard({
   };
 
   return (
-    <div className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-green-200 dark:hover:border-green-900 transition-all duration-300">
+    <div className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-2xl hover:shadow-blue-900/10 hover:border-[#1B5CA8]/30 dark:hover:border-blue-800/60 hover:-translate-y-1.5 transition-all duration-300">
       <Link href={`/products/${slug}`} className="block">
-        <div className="relative overflow-hidden h-44 bg-green-50 dark:bg-green-950/30">
+        <div className="relative overflow-hidden h-44 bg-linear-to-br from-blue-50 to-gray-50 dark:from-blue-950/30 dark:to-gray-900">
           <img
             src={img}
             alt={name}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
           />
 
-          <span className="absolute top-2 right-2 text-white text-xs font-bold px-2 py-0.5 rounded-full bg-[#CC2229]">
+          <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+          <span className="absolute top-2 right-2 text-white text-xs font-bold px-2 py-0.5 rounded-full bg-linear-to-r from-[#CC2229] to-[#a3191f] shadow-md">
             {cat}
           </span>
         </div>
@@ -61,7 +63,7 @@ export default function ProductCard({
           <button
             type="button"
             onClick={() => onBuy?.(product)}
-            className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-[#CC2229] hover:bg-[#9e1a1f] text-white text-xs font-semibold transition-colors"
+            className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-linear-to-r from-[#CC2229] to-[#a3191f] hover:brightness-110 text-white text-xs font-semibold shadow-sm hover:shadow-md transition-all"
           >
             <Zap size={15} />
             Buy Now
@@ -70,7 +72,7 @@ export default function ProductCard({
           <button
             type="button"
             onClick={() => onAddToCart?.(product)}
-            className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-[#1B5CA8] hover:bg-[#0d3d75] text-white text-xs font-semibold transition-colors"
+            className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-linear-to-r from-[#1B5CA8] to-[#123f73] hover:brightness-110 text-white text-xs font-semibold shadow-sm hover:shadow-md transition-all"
           >
             <ShoppingCart size={15} />
             Add to Cart

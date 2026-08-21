@@ -8,7 +8,7 @@ export default function CartItem({ item }) {
   const { updateQuantity, removeFromCart } = useCart();
 
   return (
-    <div className="flex gap-4 p-4 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl">
+    <div className="flex gap-4 p-4 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
       <div className="relative w-24 h-24 shrink-0 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800">
         <Image src={item.img} alt={item.name} fill className="object-cover" />
       </div>

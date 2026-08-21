@@ -51,25 +51,31 @@ export default function Hero() {
           <img
             src={item.img}
             alt={item.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-105"
           />
 
-          <div className="absolute inset-0 bg-linear-to-r from-[#0D1C45]/90 via-[#0D1C45]/60 to-black/20 dark:from-[#050b1c]/95 dark:via-[#0D1C45]/70 dark:to-black/30" />
+          <div className="absolute inset-0 bg-linear-to-r from-[#0D1C45]/95 via-[#0D1C45]/70 to-black/30 dark:from-[#050b1c]/95 dark:via-[#0D1C45]/75 dark:to-black/40" />
         </div>
       ))}
 
+      <div
+        className="pointer-events-none absolute top-1/4 right-[10%] w-72 h-72 rounded-full bg-[#CC2229]/20 blur-3xl animate-float-slow"
+        aria-hidden
+      />
+
       <div className="relative z-10 h-full flex items-center">
         <div className="max-w-7xl mx-auto px-6 w-full">
-          <div className="max-w-xl">
-            <span className="inline-block bg-[#CC2229] dark:bg-[#e02b32] text-white text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-5">
+          <div key={slide} className="max-w-xl animate-fade-in-up">
+            <span className="inline-flex items-center gap-2 bg-linear-to-r from-[#CC2229] to-[#a3191f] text-white text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-5 shadow-lg shadow-red-900/30">
+              <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
               {currentSlide.tag}
             </span>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 tracking-tight">
               {currentSlide.title}
             </h1>
 
-            <p className="text-green-100 dark:text-gray-200 text-lg leading-relaxed mb-8">
+            <p className="text-blue-100 dark:text-gray-200 text-lg leading-relaxed mb-8">
               {currentSlide.subtitle}
             </p>
 
@@ -95,7 +101,7 @@ export default function Hero() {
             onClick={() => goToSlide(index)}
             className={`rounded-full transition-all duration-300 ${
               index === slide
-                ? "w-8 h-2.5 bg-[#CC2229] dark:bg-[#e02b32]"
+                ? "w-8 h-2.5 bg-linear-to-r from-[#CC2229] to-[#a3191f]"
                 : "w-2.5 h-2.5 bg-white/50 hover:bg-white/80 dark:bg-white/30 dark:hover:bg-white/60"
             }`}
             aria-label={`Go to slide ${index + 1}`}
@@ -107,7 +113,7 @@ export default function Hero() {
         onClick={() =>
           goToSlide((slide - 1 + HERO_SLIDES.length) % HERO_SLIDES.length)
         }
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 dark:bg-black/30 dark:hover:bg-black/50 backdrop-blur-sm text-white flex items-center justify-center transition-colors"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/25 dark:bg-black/30 dark:hover:bg-black/50 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all hover:scale-110"
         aria-label="Previous slide"
       >
         <ChevronLeft size={22} />
@@ -115,7 +121,7 @@ export default function Hero() {
 
       <button
         onClick={() => goToSlide((slide + 1) % HERO_SLIDES.length)}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 dark:bg-black/30 dark:hover:bg-black/50 backdrop-blur-sm text-white flex items-center justify-center transition-colors"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/25 dark:bg-black/30 dark:hover:bg-black/50 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all hover:scale-110"
         aria-label="Next slide"
       >
         <ChevronRight size={22} />

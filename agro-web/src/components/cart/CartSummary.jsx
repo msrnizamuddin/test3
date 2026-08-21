@@ -12,7 +12,7 @@ export default function CartSummary() {
   }, 0);
 
   return (
-    <div className="h-fit p-6 bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl">
+    <div className="h-fit p-6 bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl shadow-sm lg:sticky lg:top-24">
       <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
         Order Summary
       </h2>
@@ -42,7 +42,7 @@ export default function CartSummary() {
 
       <Link
         href="/checkout"
-        className="block w-full text-center px-6 py-3 bg-[#CC2229] hover:bg-[#9e1a1f] text-white font-semibold rounded-xl transition-colors"
+        className="block w-full text-center px-6 py-3.5 bg-linear-to-r from-[#CC2229] to-[#a3191f] hover:brightness-110 text-white font-semibold rounded-xl transition-all shadow-lg shadow-red-900/20 hover:-translate-y-0.5"
       >
         Proceed to Checkout
       </Link>

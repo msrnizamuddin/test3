@@ -64,35 +64,43 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-4">
+    <section
+      id="contact"
+      className="py-20 px-4 bg-gray-50 dark:bg-gray-950 transition-colors"
+    >
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
         <div>
-          <span className="font-semibold text-sm uppercase tracking-widest text-[#CC2229]">
+          <span className="inline-flex font-semibold text-xs uppercase tracking-[0.2em] text-[#CC2229] bg-[#CC2229]/10 dark:text-red-300 dark:bg-red-500/10 px-3 py-1 rounded-full">
             যোগাযোগ করুন
           </span>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mt-4 mb-6 tracking-tight">
             Get In Touch
           </h2>
 
-          <p className="text-gray-600 mb-8">
+          <p className="text-gray-600 dark:text-gray-300 mb-8">
             Have questions about our products or services? Our agricultural
             experts are ready to help you grow better.
           </p>
 
           <div className="space-y-5">
             {contactInfo.map(({ icon: Icon, label, value }) => (
-              <div key={label} className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-[#e8f0fb] text-[#1B5CA8]">
+              <div
+                key={label}
+                className="group flex items-start gap-4 p-3 -m-3 rounded-xl hover:bg-white dark:hover:bg-gray-900 transition-colors"
+              >
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-linear-to-br from-[#1B5CA8]/15 to-[#1B5CA8]/5 text-[#1B5CA8] dark:from-blue-500/20 dark:to-blue-500/5 dark:text-blue-400 group-hover:scale-110 transition-transform">
                   <Icon size={20} />
                 </div>
 
                 <div>
-                  <div className="text-xs text-gray-400 font-medium uppercase tracking-wide">
+                  <div className="text-xs text-gray-400 dark:text-gray-500 font-medium uppercase tracking-wide">
                     {label}
                   </div>
 
-                  <div className="text-gray-800 font-medium">{value}</div>
+                  <div className="text-gray-800 dark:text-gray-100 font-medium">
+                    {value}
+                  </div>
                 </div>
               </div>
             ))}
@@ -101,9 +109,9 @@ export default function Contact() {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+          className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl shadow-blue-900/5 border border-gray-100 dark:border-gray-800"
         >
-          <h3 className="font-bold text-gray-900 text-xl mb-6">
+          <h3 className="font-bold text-gray-900 dark:text-white text-xl mb-6">
             Send a Message
           </h3>
 
@@ -133,7 +141,7 @@ export default function Contact() {
             />
 
             <div>
-              <label className="block text-xs font-medium text-gray-500 mb-1.5">
+              <label className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1.5">
                 Message
               </label>
 
@@ -141,11 +149,11 @@ export default function Contact() {
                 rows={4}
                 placeholder="Tell us about your farming needs..."
                 {...register("message")}
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-100 resize-none"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 text-sm focus:outline-none focus:border-[#1B5CA8] dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/40 transition-colors resize-none"
               />
 
               {errors.message && (
-                <p className="text-red-500 text-xs mt-1">
+                <p className="text-red-500 dark:text-red-400 text-xs mt-1">
                   {errors.message.message}
                 </p>
               )}
@@ -153,7 +161,7 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="w-full py-3 bg-[#CC2229] hover:bg-[#9e1a1f] text-white font-semibold rounded-xl transition-colors shadow-md"
+              className="w-full py-3.5 bg-linear-to-r from-[#CC2229] to-[#a3191f] hover:brightness-110 text-white font-semibold rounded-xl transition-all shadow-lg shadow-red-900/20 hover:-translate-y-0.5"
             >
               Send Message
             </button>
