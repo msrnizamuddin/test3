@@ -15,6 +15,8 @@ import {
 export const NAV_LINKS = [
   { label: "Home", href: "/home" },
   { label: "Products", href: "/products" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 export const QUICK_LINKS = [
   { label: "Home", href: "/home" },

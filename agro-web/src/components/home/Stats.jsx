@@ -32,7 +32,7 @@ function useCountUp(target, active, duration = 1600) {
   return count;
 }
 
-function StatItem({ stat }) {
+function StatItem({ stat, index }) {
   const ref = useRef(null);
   const [active, setActive] = useState(false);
 
@@ -62,7 +62,10 @@ function StatItem({ stat }) {
   return (
     <div
       ref={ref}
-      className="group relative flex flex-col items-center px-5 py-10 text-center md:py-12"
+      className={`group relative flex flex-col items-center px-5 py-10 text-center transition-all duration-700 ease-out md:py-12 ${
+        active ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+      }`}
+      style={{ transitionDelay: active ? `${index * 120}ms` : "0ms" }}
     >
       <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-sand-300 transition-all duration-300 group-hover:scale-110 group-hover:bg-sand-300/15">
         {Icon && <Icon size={24} strokeWidth={1.8} />}
@@ -117,7 +120,7 @@ export default function Stats() {
                 index >= 2 ? "border-t border-white/10 md:border-t-0" : ""
               }`}
             >
-              <StatItem stat={stat} />
+              <StatItem stat={stat} index={index} />
             </div>
           ))}
         </div>
