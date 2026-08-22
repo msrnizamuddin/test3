@@ -122,6 +122,18 @@ export default function Stats() {
           ))}
         </div>
       </div>
+
+      <svg
+        className="absolute inset-x-0 -bottom-px h-10 w-full sm:h-14 lg:h-16"
+        viewBox="0 0 1440 100"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M0,40 C240,90 480,0 720,30 C960,60 1200,90 1440,40 L1440,100 L0,100 Z"
+          style={{ fill: "var(--background)" }}
+        />
+      </svg>
     </section>
   );
 }

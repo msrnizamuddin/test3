@@ -64,8 +64,8 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 border-b transition-all duration-300 ${
         scrolled
-          ? "border-brand-700/20 bg-white/95 shadow-[0_8px_30px_rgba(204,58,99,0.18)] backdrop-blur-xl dark:border-navy-400/30 dark:bg-navy-900/95 dark:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
-          : "border-gray-200 bg-white dark:border-navy-400/30 dark:bg-navy-900"
+          ? "border-brand-700/20 bg-background/95 shadow-[0_8px_30px_rgba(204,58,99,0.18)] backdrop-blur-xl dark:border-navy-400/30 dark:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
+          : "border-border bg-background"
       }`}
     >
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6">
@@ -190,7 +190,7 @@ export default function Navbar() {
             : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-white px-4 py-4 dark:bg-navy-900 sm:px-6">
+        <div className="bg-background px-4 py-4 sm:px-6">
           <nav className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
               <Link

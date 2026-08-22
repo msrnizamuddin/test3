@@ -7,7 +7,7 @@ import logoImg from "@/imports/home-logo.png";
 
 export default function Login() {
   return (
-    <main className="min-h-screen bg-lime-50 dark:bg-navy-900 flex items-center justify-center px-4 py-12 transition-colors">
+    <main className="min-h-screen bg-background flex items-center justify-center px-4 py-12 transition-colors">
       <div className="w-full max-w-md">
         <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl shadow-xl p-8">
           <div className="flex justify-center mb-6">

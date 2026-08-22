@@ -33,7 +33,7 @@ export default function ProductDetails() {
   // Product not found
   if (!product) {
     return (
-      <main className="min-h-screen bg-white dark:bg-navy-900 flex items-center justify-center px-4">
+      <main className="min-h-screen bg-background flex items-center justify-center px-4">
         <div className="text-center max-w-md">
           <Package
             size={56}
@@ -72,7 +72,7 @@ export default function ProductDetails() {
   };
 
   return (
-    <main className="min-h-screen bg-white dark:bg-navy-900 transition-colors">
+    <main className="min-h-screen bg-background transition-colors">
       <section className="max-w-7xl mx-auto px-4 py-8 md:py-12">
         {/* Back */}
         <Link

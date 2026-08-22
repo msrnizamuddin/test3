@@ -30,7 +30,7 @@ export default function Products() {
   return (
     <section
       id="products"
-      className="py-20 px-4 bg-surface text-foreground transition-colors"
+      className="py-20 px-4 bg-background text-foreground transition-colors"
     >
       <div className="max-w-7xl mx-auto">
         <SectionHeader
@@ -56,7 +56,7 @@ export default function Products() {
                     active
                       ? "bg-gradient-brand text-white shadow-md"
                       : `
-                        bg-surface-secondary
+                        bg-surface
                         border border-border
                         text-gray-600 dark:text-gray-300
                         hover:border-brand-500
@@ -86,7 +86,9 @@ export default function Products() {
           </div>
         ) : (
           <div className="py-16 text-center">
-            <p className="text-muted">No products found in this category.</p>
+            <p className="text-muted-foreground">
+              No products found in this category.
+            </p>
           </div>
         )}
       </div>

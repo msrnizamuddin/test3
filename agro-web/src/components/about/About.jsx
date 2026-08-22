@@ -31,7 +31,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-white px-4 py-20 md:py-24 overflow-hidden"
+      className="bg-background px-4 py-20 md:py-24 overflow-hidden"
     >
       <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
         {/* Image */}
@@ -62,7 +62,7 @@ export default function About() {
           </div>
 
           {/* Award Card */}
-          <div className="absolute -left-3 -top-5 rounded-2xl border border-sand-100 bg-white px-5 py-3 shadow-lg md:-left-5">
+          <div className="absolute -left-3 -top-5 rounded-2xl border border-sand-100 bg-surface px-5 py-3 shadow-lg md:-left-5">
             <div className="text-xl font-black text-navy-600">🏆 #1</div>
 
             <div className="text-xs text-gray-500">Seedling Producer</div>

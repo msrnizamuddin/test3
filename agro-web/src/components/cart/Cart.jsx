@@ -67,13 +67,13 @@ export default function CartPage() {
 
   if (!mounted) {
     return (
-      <main className="min-h-screen bg-white dark:bg-navy-900 transition-colors" />
+      <main className="min-h-screen bg-background transition-colors" />
     );
   }
 
   if (cart.length === 0) {
     return (
-      <main className="min-h-screen bg-white dark:bg-navy-900 transition-colors">
+      <main className="min-h-screen bg-background transition-colors">
         <section className="max-w-7xl mx-auto px-4 py-16 md:py-24">
           <div className="max-w-lg mx-auto text-center">
             <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-navy-50 dark:bg-navy-900/40 flex items-center justify-center">
@@ -105,7 +105,7 @@ export default function CartPage() {
   }
 
   return (
-    <main className="min-h-screen bg-lime-50 dark:bg-navy-900 transition-colors">
+    <main className="min-h-screen bg-background transition-colors">
       <section className="max-w-7xl mx-auto px-4 py-8 md:py-12">
         <Link
           href="/products"

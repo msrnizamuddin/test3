@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ShoppingCart, Zap } from "lucide-react";
+import { Plus, Zap } from "lucide-react";
 
 export default function ProductCard({
   name,
@@ -22,9 +22,9 @@ export default function ProductCard({
   };
 
   return (
-    <div className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-brand-200 dark:hover:border-brand-800 transition-all duration-300">
+    <div className="group relative bg-white dark:bg-gray-900 rounded-3xl overflow-hidden border border-border dark:border-gray-800 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-brand-300 dark:hover:border-brand-800 transition-all duration-300">
       <Link href={`/products/${slug}`} className="block">
-        <div className="relative overflow-hidden h-44 bg-lime-100 dark:bg-brand-900/30">
+        <div className="relative overflow-hidden aspect-square bg-lime-100 dark:bg-brand-900/30">
           <Image
             src={img}
             alt={name}
@@ -33,51 +33,49 @@ export default function ProductCard({
             className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
 
-          <span className="absolute top-2 right-2 text-white text-xs font-bold px-2 py-0.5 rounded-full bg-navy-600">
+          <span className="absolute top-3 left-3 text-white text-[11px] font-bold uppercase tracking-wide px-2.5 py-1 rounded-full bg-navy-600 shadow-sm">
             {cat}
           </span>
         </div>
       </Link>
 
-      <div className="p-4">
+      <button
+        type="button"
+        onClick={() => onAddToCart?.(product)}
+        aria-label={`Add ${name} to cart`}
+        className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-navy-600 shadow-md opacity-0 translate-y-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 hover:bg-brand-600 hover:text-white"
+      >
+        <Plus size={17} />
+      </button>
+
+      <div className="p-5">
         <Link href={`/products/${slug}`}>
-          <h3 className="font-semibold text-gray-800 dark:text-white text-sm mb-2 line-clamp-2 hover:text-brand-600 transition-colors">
+          <h3 className="font-semibold text-gray-800 dark:text-white text-[15px] mb-1.5 line-clamp-2 hover:text-brand-600 transition-colors">
             {name}
           </h3>
         </Link>
 
         <div className="flex items-center justify-between mb-4">
-          <span className="font-bold text-navy-600 dark:text-navy-300">
+          <span className="text-lg font-bold text-navy-600 dark:text-navy-300">
             {price}
           </span>
 
           <Link
             href={`/products/${slug}`}
-            className="text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-brand-600 transition-colors"
+            className="text-xs font-medium text-muted-foreground hover:text-brand-600 transition-colors"
           >
             View Details
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 gap-2">
-          <button
-            type="button"
-            onClick={() => onBuy?.(product)}
-            className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold transition-colors"
-          >
-            <Zap size={15} />
-            Buy Now
-          </button>
-
-          <button
-            type="button"
-            onClick={() => onAddToCart?.(product)}
-            className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-navy-600 hover:bg-navy-700 text-white text-xs font-semibold transition-colors"
-          >
-            <ShoppingCart size={15} />
-            Add to Cart
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={() => onBuy?.(product)}
+          className="flex w-full items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-gradient-brand hover:brightness-105 text-white text-xs font-semibold transition-all"
+        >
+          <Zap size={15} />
+          Buy Now
+        </button>
       </div>
     </div>
   );

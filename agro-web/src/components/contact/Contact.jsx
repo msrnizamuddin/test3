@@ -69,7 +69,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="overflow-hidden bg-lime-50 px-4 py-20 md:py-24"
+      className="overflow-hidden bg-background px-4 py-20 md:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader

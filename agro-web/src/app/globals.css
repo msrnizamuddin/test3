@@ -5,10 +5,11 @@
 @import "@fontsource-variable/noto-sans-bengali";
 
 :root {
-  --background: #ffffff;
+  --background: #fff7eb;
   --foreground: #241019;
   --surface: #ffffff;
   --surface-muted: #f9f0e0;
+  --muted-foreground: #7a6a58;
   --border: #ecdfc8;
 
   /* Olive-sage green — primary CTA / accent, derived from #A2AB73 */
@@ -71,12 +72,16 @@
   --foreground: #fff7eb;
   --surface: #2c0f1c;
   --surface-muted: #240c17;
+  --muted-foreground: #c9a8b6;
   --border: #4a1f30;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-muted-foreground: var(--muted-foreground);
 
   --color-brand-50: var(--brand-50);
   --color-brand-100: var(--brand-100);

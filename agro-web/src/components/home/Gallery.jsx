@@ -3,7 +3,7 @@ import { GALLERY_IMAGES } from "@/data/home";
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="py-20 px-4 bg-white dark:bg-navy-900">
+    <section id="gallery" className="py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         <SectionHeader eyebrow="আমাদের গ্যালারি" title="Gallery" />
 
@@ -11,7 +11,7 @@ export default function Gallery() {
           {GALLERY_IMAGES.map((image, index) => (
             <div
               key={image}
-              className="group relative overflow-hidden rounded-2xl aspect-video bg-lime-100"
+              className="group relative overflow-hidden rounded-2xl aspect-video bg-surface-muted border border-border shadow-sm"
             >
               <img
                 src={image}
