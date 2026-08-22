@@ -89,21 +89,21 @@ export default function Stats() {
         <div
           className="absolute -left-40 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full opacity-25 blur-3xl"
           style={{
-            background: "radial-gradient(circle, #566fa2 0%, transparent 70%)",
+            background: "radial-gradient(circle, #8f4485 0%, transparent 70%)",
           }}
         />
 
         <div
           className="absolute -right-40 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full opacity-20 blur-3xl"
           style={{
-            background: "radial-gradient(circle, #79b64c 0%, transparent 70%)",
+            background: "radial-gradient(circle, #a3bd5c 0%, transparent 70%)",
           }}
         />
 
         <div
           className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-10 blur-3xl"
           style={{
-            background: "radial-gradient(circle, #cdb96e 0%, transparent 70%)",
+            background: "radial-gradient(circle, #d9efbd 0%, transparent 70%)",
           }}
         />
       </div>

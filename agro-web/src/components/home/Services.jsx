@@ -13,14 +13,14 @@ export default function Services() {
         <div
           className="absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full opacity-20 blur-3xl"
           style={{
-            background: "radial-gradient(circle, #28396c 0%, transparent 70%)",
+            background: "radial-gradient(circle, #450c3f 0%, transparent 70%)",
           }}
         />
 
         <div
           className="absolute -bottom-48 -left-48 h-[500px] w-[500px] rounded-full opacity-10 blur-3xl"
           style={{
-            background: "radial-gradient(circle, #79b64c 0%, transparent 70%)",
+            background: "radial-gradient(circle, #a3bd5c 0%, transparent 70%)",
           }}
         />
 

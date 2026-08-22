@@ -64,7 +64,7 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 border-b transition-all duration-300 ${
         scrolled
-          ? "border-brand-700/20 bg-white/95 shadow-[0_8px_30px_rgba(40,57,108,0.12)] backdrop-blur-xl dark:border-navy-400/30 dark:bg-navy-900/95 dark:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
+          ? "border-brand-700/20 bg-white/95 shadow-[0_8px_30px_rgba(69,12,63,0.15)] backdrop-blur-xl dark:border-navy-400/30 dark:bg-navy-900/95 dark:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
           : "border-gray-200 bg-white dark:border-navy-400/30 dark:bg-navy-900"
       }`}
     >
@@ -137,7 +137,7 @@ export default function Navbar() {
 
           <Link
             href="/signup"
-            className="rounded-full bg-gradient-brand px-5 py-2.5 text-sm font-bold text-white shadow-[0_5px_18px_rgba(92,150,56,0.3)] transition-all hover:scale-[1.03] hover:shadow-[0_8px_24px_rgba(92,150,56,0.4)]"
+            className="rounded-full bg-gradient-brand px-5 py-2.5 text-sm font-bold text-white shadow-[0_5px_18px_rgba(137,159,71,0.35)] transition-all hover:scale-[1.03] hover:shadow-[0_8px_24px_rgba(137,159,71,0.45)]"
           >
             Signup
           </Link>

@@ -6,47 +6,47 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #16210f;
+  --foreground: #1f1420;
   --surface: #ffffff;
-  --surface-muted: #f8fbef;
-  --border: #e2e8c8;
+  --surface-muted: #f7fbe6;
+  --border: #dde8c0;
 
-  /* Brand green — primary CTA / accent, derived from #B5E18B */
-  --brand-50: #f4fbe9;
-  --brand-100: #e7f6d1;
-  --brand-200: #d3edac;
-  --brand-300: #b5e18b;
-  --brand-400: #97ce68;
-  --brand-500: #79b64c;
-  --brand-600: #5c9638;
-  --brand-700: #47762c;
-  --brand-800: #385d24;
-  --brand-900: #2c481e;
+  /* Brand green — primary CTA / accent, derived from #B9D175 */
+  --brand-50: #f6faec;
+  --brand-100: #ecf4d4;
+  --brand-200: #d9efbd;
+  --brand-300: #c7e298;
+  --brand-400: #b9d175;
+  --brand-500: #a3bd5c;
+  --brand-600: #899f47;
+  --brand-700: #6d8138;
+  --brand-800: #56662c;
+  --brand-900: #435020;
 
-  /* Deep navy — secondary accent / dark surfaces, from #28396C */
-  --navy-50: #eef1f8;
-  --navy-100: #d3daec;
-  --navy-200: #a9b9da;
-  --navy-300: #7c94c2;
-  --navy-400: #566fa2;
-  --navy-500: #3d5384;
-  --navy-600: #28396c;
-  --navy-700: #202e59;
-  --navy-800: #182345;
-  --navy-900: #101731;
+  /* Deep plum — secondary accent / dark surfaces, from #450C3F */
+  --navy-50: #f7eef6;
+  --navy-100: #e8cde4;
+  --navy-200: #cf9bc9;
+  --navy-300: #b169ab;
+  --navy-400: #8f4485;
+  --navy-500: #6d2a67;
+  --navy-600: #450c3f;
+  --navy-700: #380a33;
+  --navy-800: #2b0827;
+  --navy-900: #1e051b;
 
-  /* Warm sand / gold — highlights, badges, from #EAE6BC */
-  --sand-100: #f8f6e6;
-  --sand-200: #eae6bc;
-  --sand-300: #ddd39c;
-  --sand-400: #cdb96e;
-  --sand-500: #b99f47;
-  --sand-600: #96813a;
+  /* Pale green highlight — badges, dark-mode accents, from #D9EFBD */
+  --sand-100: #fbfdf3;
+  --sand-200: #f5fbda;
+  --sand-300: #ecf5c2;
+  --sand-400: #d9efbd;
+  --sand-500: #c7e298;
+  --sand-600: #a3bd5c;
 
-  /* Pale lime — soft section tints, from #F0FFC2 */
-  --lime-50: #f8ffe6;
-  --lime-100: #f0ffc2;
-  --lime-200: #e0f79a;
+  /* Pale lime — soft section tints, from #F5FBDA */
+  --lime-50: #fcfef7;
+  --lime-100: #f5fbda;
+  --lime-200: #ecf5c2;
 
   --gradient-hero: linear-gradient(
     135deg,
@@ -67,11 +67,11 @@
 }
 
 .dark {
-  --background: #0e1710;
-  --foreground: #eef3e2;
-  --surface: #16211a;
-  --surface-muted: #121c15;
-  --border: #26332a;
+  --background: #170a19;
+  --foreground: #f5fbda;
+  --surface: #220c24;
+  --surface-muted: #1a091b;
+  --border: #3a1a37;
 }
 
 @theme inline {
