@@ -3,7 +3,7 @@ import { ShoppingCart } from "lucide-react";
 
 export default function EmptyCart() {
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-950 flex items-center justify-center px-4">
+    <main className="min-h-screen bg-background flex items-center justify-center px-4">
       <div className="text-center">
         <ShoppingCart
           size={64}

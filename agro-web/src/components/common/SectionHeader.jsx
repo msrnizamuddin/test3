@@ -9,7 +9,7 @@ export default function SectionHeader({
     <div className={`text-center mb-12 ${className}`}>
       <span
         className={`font-semibold text-sm uppercase tracking-widest ${
-          dark ? "text-sand-300" : "text-navy-600 dark:text-navy-300"
+          dark ? "text-sand-300" : "text-brand-600"
         }`}
       >
         {eyebrow}
@@ -17,7 +17,7 @@ export default function SectionHeader({
 
       <h2
         className={`text-3xl md:text-4xl font-bold mt-2 ${
-          dark ? "text-white" : "text-gray-900 dark:text-white"
+          dark ? "text-white" : "text-gray-900"
         }`}
       >
         {title}
@@ -26,7 +26,7 @@ export default function SectionHeader({
       {description && (
         <p
           className={`mt-3 max-w-xl mx-auto ${
-            dark ? "text-navy-100" : "text-gray-500 dark:text-gray-400"
+            dark ? "text-navy-100" : "text-gray-600"
           }`}
         >
           {description}

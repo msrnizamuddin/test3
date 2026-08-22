@@ -3,8 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import { STATS } from "@/data/home";
 
-function useCountUp(target, active, duration = 1600) {
+function useCountUp(target, active, duration = 900) {
   const [count, setCount] = useState(0);
+  const rafRef = useRef(null);
 
   useEffect(() => {
     if (!active) return;
@@ -20,13 +21,17 @@ function useCountUp(target, active, duration = 1600) {
       setCount(value);
 
       if (progress < 1) {
-        requestAnimationFrame(animate);
+        rafRef.current = requestAnimationFrame(animate);
       } else {
         setCount(target);
       }
     };
 
-    requestAnimationFrame(animate);
+    rafRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
   }, [target, active, duration]);
 
   return count;
@@ -50,7 +55,8 @@ function StatItem({ stat, index }) {
         }
       },
       {
-        threshold: 0.4,
+        threshold: 0.1,
+        rootMargin: "0px 0px -10% 0px",
       },
     );
 
@@ -92,21 +98,21 @@ export default function Stats() {
         <div
           className="absolute -left-40 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full opacity-25 blur-3xl"
           style={{
-            background: "radial-gradient(circle, #8f4485 0%, transparent 70%)",
+            background: "radial-gradient(circle, #4580d1 0%, transparent 70%)",
           }}
         />
 
         <div
           className="absolute -right-40 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full opacity-20 blur-3xl"
           style={{
-            background: "radial-gradient(circle, #a3bd5c 0%, transparent 70%)",
+            background: "radial-gradient(circle, #2288d4 0%, transparent 70%)",
           }}
         />
 
         <div
           className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-10 blur-3xl"
           style={{
-            background: "radial-gradient(circle, #d9efbd 0%, transparent 70%)",
+            background: "radial-gradient(circle, #82c0ef 0%, transparent 70%)",
           }}
         />
       </div>
@@ -125,6 +131,18 @@ export default function Stats() {
           ))}
         </div>
       </div>
+
+      <svg
+        className="absolute inset-x-0 -bottom-px h-10 w-full sm:h-14 lg:h-16"
+        viewBox="0 0 1440 100"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M0,40 C240,90 480,0 720,30 C960,60 1200,90 1440,40 L1440,100 L0,100 Z"
+          style={{ fill: "var(--background)" }}
+        />
+      </svg>
     </section>
   );
 }

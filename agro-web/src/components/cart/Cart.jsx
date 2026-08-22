@@ -66,14 +66,12 @@ export default function CartPage() {
   const total = subtotal + delivery;
 
   if (!mounted) {
-    return (
-      <main className="min-h-screen bg-white dark:bg-navy-900 transition-colors" />
-    );
+    return <main className="min-h-screen bg-background transition-colors" />;
   }
 
   if (cart.length === 0) {
     return (
-      <main className="min-h-screen bg-white dark:bg-navy-900 transition-colors">
+      <main className="min-h-screen bg-background transition-colors">
         <section className="max-w-7xl mx-auto px-4 py-16 md:py-24">
           <div className="max-w-lg mx-auto text-center">
             <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-navy-50 dark:bg-navy-900/40 flex items-center justify-center">
@@ -105,7 +103,7 @@ export default function CartPage() {
   }
 
   return (
-    <main className="min-h-screen bg-lime-50 dark:bg-navy-900 transition-colors">
+    <main className="min-h-screen bg-background transition-colors">
       <section className="max-w-7xl mx-auto px-4 py-8 md:py-12">
         <Link
           href="/products"
@@ -129,7 +127,7 @@ export default function CartPage() {
 
           <button
             onClick={clearCart}
-            className="text-sm font-medium text-red-500 hover:text-red-700 dark:hover:text-red-400 transition-colors"
+            className="text-sm font-medium text-gray-500 hover:text-navy-700 dark:hover:text-navy-400 transition-colors"
           >
             Clear Cart
           </button>
@@ -172,7 +170,7 @@ export default function CartPage() {
 
                       <button
                         onClick={() => removeItem(item.name)}
-                        className="shrink-0 p-2 rounded-lg text-gray-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-950/30 transition-colors"
+                        className="shrink-0 p-2 rounded-lg text-gray-400 hover:text-navy-700 hover:bg-brand-50 dark:hover:bg-brand-900/30 transition-colors"
                         aria-label={`Remove ${item.name}`}
                       >
                         <Trash2 size={18} />
@@ -248,7 +246,7 @@ export default function CartPage() {
             </div>
 
             <Link
-              href="#" //not yet made
+              href="/checkout" //not yet made
               className="mt-6 w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-brand hover:brightness-110 text-white font-semibold transition-colors shadow-sm"
             >
               Proceed to Checkout

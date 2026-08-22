@@ -6,53 +6,54 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1f1420;
+  --foreground: #14263d;
   --surface: #ffffff;
-  --surface-muted: #f7fbe6;
-  --border: #dde8c0;
+  --surface-muted: #eef6fc;
+  --muted-foreground: #5b7690;
+  --border: #d6e6f3;
 
-  /* Brand green — primary CTA / accent, derived from #B9D175 */
-  --brand-50: #f6faec;
-  --brand-100: #ecf4d4;
-  --brand-200: #d9efbd;
-  --brand-300: #c7e298;
-  --brand-400: #b9d175;
-  --brand-500: #a3bd5c;
-  --brand-600: #899f47;
-  --brand-700: #6d8138;
-  --brand-800: #56662c;
-  --brand-900: #435020;
+  /* Primary blue — CTAs / links, anchored on the logo blue #0F6BB8 */
+  --brand-50: #eef7fd;
+  --brand-100: #d9edfb;
+  --brand-200: #b3daf7;
+  --brand-300: #82c0ef;
+  --brand-400: #4da3e3;
+  --brand-500: #2288d4;
+  --brand-600: #0f6bb8;
+  --brand-700: #0c5695;
+  --brand-800: #0a4374;
+  --brand-900: #08334f;
 
-  /* Deep plum — secondary accent / dark surfaces, from #450C3F */
-  --navy-50: #f7eef6;
-  --navy-100: #e8cde4;
-  --navy-200: #cf9bc9;
-  --navy-300: #b169ab;
-  --navy-400: #8f4485;
-  --navy-500: #6d2a67;
-  --navy-600: #450c3f;
-  --navy-700: #380a33;
-  --navy-800: #2b0827;
-  --navy-900: #1e051b;
+  /* Deep navy blue — headers / dark bands, same hue family, darker */
+  --navy-50: #eaf1fb;
+  --navy-100: #cfe0f5;
+  --navy-200: #9fc0ec;
+  --navy-300: #6ea0e2;
+  --navy-400: #4580d1;
+  --navy-500: #2c65b3;
+  --navy-600: #1d4e8f;
+  --navy-700: #163d70;
+  --navy-800: #102d54;
+  --navy-900: #0b1f3a;
 
-  /* Pale green highlight — badges, dark-mode accents, from #D9EFBD */
-  --sand-100: #fbfdf3;
-  --sand-200: #f5fbda;
-  --sand-300: #ecf5c2;
-  --sand-400: #d9efbd;
-  --sand-500: #c7e298;
-  --sand-600: #a3bd5c;
+  /* Sky-blue highlight — badges, accents on dark bands */
+  --sand-100: #eef7fd;
+  --sand-200: #d9edfb;
+  --sand-300: #b3daf7;
+  --sand-400: #82c0ef;
+  --sand-500: #4da3e3;
+  --sand-600: #2288d4;
 
-  /* Pale lime — soft section tints, from #F5FBDA */
-  --lime-50: #fcfef7;
-  --lime-100: #f5fbda;
-  --lime-200: #ecf5c2;
+  /* Near-white blue tint — soft section backgrounds */
+  --lime-50: #ffffff;
+  --lime-100: #ffffff;
+  --lime-200: #eef6fc;
 
   --gradient-hero: linear-gradient(
     135deg,
     var(--navy-800) 0%,
     var(--navy-600) 45%,
-    var(--brand-600) 100%
+    var(--brand-500) 100%
   );
   --gradient-brand: linear-gradient(
     120deg,
@@ -62,21 +63,25 @@
   --gradient-fresh: linear-gradient(
     135deg,
     var(--lime-100) 0%,
-    var(--brand-200) 100%
+    var(--brand-100) 100%
   );
 }
 
 .dark {
-  --background: #170a19;
-  --foreground: #f5fbda;
-  --surface: #220c24;
-  --surface-muted: #1a091b;
-  --border: #3a1a37;
+  --background: #ffffff;
+  --foreground: #14263d;
+  --surface: #ffffff;
+  --surface-muted: #eef6fc;
+  --muted-foreground: #5b7690;
+  --border: #d6e6f3;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-muted-foreground: var(--muted-foreground);
 
   --color-brand-50: var(--brand-50);
   --color-brand-100: var(--brand-100);
@@ -182,4 +187,16 @@ img {
     opacity: 1;
     transform: translateY(0);
   }
+}
+/* Hide scrollbars while keeping scrolling enabled */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.checkout-input {
+  @apply w-full rounded-xl border border-sand-100 bg-white px-3.5 py-2.5 text-sm text-gray-800 transition-colors focus:border-brand-600 focus:outline-none focus:ring-4 focus:ring-brand-600/10;
 }

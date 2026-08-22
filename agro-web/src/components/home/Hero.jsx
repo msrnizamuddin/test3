@@ -42,21 +42,21 @@ export default function Hero() {
         <div
           className="absolute -right-40 -top-40 h-[650px] w-[650px] rounded-full opacity-30 blur-3xl"
           style={{
-            background: "radial-gradient(circle, #8f4485 0%, transparent 70%)",
+            background: "radial-gradient(circle, #4580d1 0%, transparent 70%)",
           }}
         />
 
         <div
           className="absolute -bottom-48 -left-48 h-[500px] w-[500px] rounded-full opacity-25 blur-3xl"
           style={{
-            background: "radial-gradient(circle, #a3bd5c 0%, transparent 70%)",
+            background: "radial-gradient(circle, #2288d4 0%, transparent 70%)",
           }}
         />
 
         <div
           className="absolute right-[20%] top-[20%] h-[300px] w-[300px] rounded-full opacity-15 blur-3xl"
           style={{
-            background: "radial-gradient(circle, #d9efbd 0%, transparent 70%)",
+            background: "radial-gradient(circle, #82c0ef 0%, transparent 70%)",
           }}
         />
 

@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ShoppingCart, Zap } from "lucide-react";
+import { Check, ShoppingCart, Zap } from "lucide-react";
+import { useState } from "react";
 
 export default function ProductCard({
   name,
@@ -10,9 +11,12 @@ export default function ProductCard({
   cat,
   price,
   img,
+  priority = false,
   onBuy,
   onAddToCart,
 }) {
+  const [addedToCart, setAddedToCart] = useState(false);
+
   const product = {
     name,
     slug,
@@ -21,61 +25,85 @@ export default function ProductCard({
     img,
   };
 
+  const handleAddToCart = () => {
+    onAddToCart?.(product);
+
+    setAddedToCart(true);
+
+    setTimeout(() => {
+      setAddedToCart(false);
+    }, 1500);
+  };
+
   return (
-    <div className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-brand-200 dark:hover:border-brand-800 transition-all duration-300">
+    <div className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-xl">
       <Link href={`/products/${slug}`} className="block">
-        <div className="relative overflow-hidden h-44 bg-lime-100 dark:bg-brand-900/30">
+        <div className="relative aspect-square overflow-hidden bg-gray-100">
           <Image
             src={img}
             alt={name}
             fill
-            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            priority={priority}
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
 
-          <span className="absolute top-2 right-2 text-white text-xs font-bold px-2 py-0.5 rounded-full bg-navy-600">
+          <span className="absolute left-3 top-3 rounded-full bg-[#1e4d8b] px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-sm">
             {cat}
           </span>
         </div>
       </Link>
 
-      <div className="p-4">
+      <div className="p-5">
         <Link href={`/products/${slug}`}>
-          <h3 className="font-semibold text-gray-800 dark:text-white text-sm mb-2 line-clamp-2 hover:text-brand-600 transition-colors">
+          <h3 className="mb-1.5 line-clamp-2 text-[15px] font-semibold text-gray-800 transition-colors hover:text-[#3992e6]">
             {name}
           </h3>
         </Link>
 
-        <div className="flex items-center justify-between mb-4">
-          <span className="font-bold text-navy-600 dark:text-navy-300">
-            {price}
-          </span>
+        <div className="mb-4 flex items-center justify-between gap-3">
+          <span className="text-lg font-bold text-[#132c44]">{price}</span>
 
           <Link
             href={`/products/${slug}`}
-            className="text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-brand-600 transition-colors"
+            className="text-xs font-medium text-gray-500 transition-colors hover:text-[#1a3d5e]"
           >
             View Details
           </Link>
         </div>
 
         <div className="grid grid-cols-2 gap-2">
+          {/* Add To Cart */}
+          <button
+            type="button"
+            onClick={handleAddToCart}
+            className={`flex items-center justify-center gap-1.5 rounded-xl border px-3 py-2.5 text-xs font-semibold transition-all duration-300 ${
+              addedToCart
+                ? "border-green-500 bg-green-50 text-green-600"
+                : "border-[#266bbb] bg-white text-[#152129] hover:bg-[#3d5f9c] hover:text-white"
+            }`}
+          >
+            {addedToCart ? (
+              <>
+                <Check size={15} className="animate-bounce" />
+                Added
+              </>
+            ) : (
+              <>
+                <ShoppingCart size={15} />
+                Add to Cart
+              </>
+            )}
+          </button>
+
+          {/* Buy Now */}
           <button
             type="button"
             onClick={() => onBuy?.(product)}
-            className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold transition-colors"
+            className="flex items-center justify-center gap-1.5 rounded-xl bg-[#3976e6] px-3 py-2.5 text-xs font-semibold text-white transition-all hover:brightness-105"
           >
             <Zap size={15} />
             Buy Now
-          </button>
-
-          <button
-            type="button"
-            onClick={() => onAddToCart?.(product)}
-            className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-navy-600 hover:bg-navy-700 text-white text-xs font-semibold transition-colors"
-          >
-            <ShoppingCart size={15} />
-            Add to Cart
           </button>
         </div>
       </div>
