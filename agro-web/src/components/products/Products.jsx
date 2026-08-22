@@ -161,7 +161,7 @@ function CategoryRow({
         {products.map((product, index) => (
           <div
             key={product.slug}
-            className="flex-none w-[calc(50%-10px)] sm:w-[calc(33.333%-13.333px)] md:w-[calc(25%-15px)] lg:w-[calc(20%-16px)]"
+            className="flex-none w-[calc(50%-10px)] sm:w-[calc(33.333%-13.333px)] md:w-[calc(25%-15px)] lg:w-[calc(23%-16px)]"
           >
             <ProductCard
               {...product}
