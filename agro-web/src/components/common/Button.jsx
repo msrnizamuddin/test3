@@ -11,13 +11,13 @@ export default function Button({
 }) {
   const variants = {
     primary:
-      "bg-[#CC2229] text-white hover:bg-[#9e1a1f] dark:bg-[#CC2229] dark:hover:bg-[#e52b32]",
+      "bg-gradient-brand text-white hover:brightness-110 dark:bg-gradient-brand dark:hover:brightness-125",
 
     secondary:
-      "bg-[#1B5CA8] text-white hover:bg-[#0d3d75] dark:bg-[#2874c7] dark:hover:bg-[#1B5CA8]",
+      "bg-navy-600 text-white hover:bg-navy-700 dark:bg-navy-500 dark:hover:bg-navy-600",
 
     outline:
-      "border-2 border-[#CC2229] text-[#CC2229] hover:bg-red-50 dark:border-[#ef4444] dark:text-red-400 dark:hover:bg-red-950/40",
+      "border-2 border-brand-600 text-brand-700 hover:bg-brand-50 dark:border-brand-400 dark:text-brand-400 dark:hover:bg-brand-900/40",
   };
 
   const classes = `

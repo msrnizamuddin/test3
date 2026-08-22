@@ -33,7 +33,7 @@ export default function ProductDetails() {
   // Product not found
   if (!product) {
     return (
-      <main className="min-h-screen bg-white dark:bg-gray-950 flex items-center justify-center px-4">
+      <main className="min-h-screen bg-white dark:bg-navy-900 flex items-center justify-center px-4">
         <div className="text-center max-w-md">
           <Package
             size={56}
@@ -72,7 +72,7 @@ export default function ProductDetails() {
   };
 
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-950 transition-colors">
+    <main className="min-h-screen bg-white dark:bg-navy-900 transition-colors">
       <section className="max-w-7xl mx-auto px-4 py-8 md:py-12">
         {/* Back */}
         <Link
@@ -81,7 +81,7 @@ export default function ProductDetails() {
             inline-flex items-center gap-2
             text-sm font-medium
             text-gray-500 dark:text-gray-400
-            hover:text-[#CC2229] dark:hover:text-red-400
+            hover:text-brand-600 dark:hover:text-brand-400
             transition-colors
             mb-8
           "
@@ -113,7 +113,7 @@ export default function ProductDetails() {
               <span
                 className="
                   absolute top-5 left-5
-                  bg-[#CC2229]
+                  bg-navy-600
                   text-white
                   text-xs font-bold
                   px-3 py-1.5
@@ -133,7 +133,7 @@ export default function ProductDetails() {
               className="
                 text-sm font-semibold
                 uppercase tracking-widest
-                text-[#1B5CA8] dark:text-blue-300
+                text-navy-600 dark:text-navy-300
                 mb-3
               "
             >
@@ -157,7 +157,7 @@ export default function ProductDetails() {
               <span
                 className="
                   text-2xl font-bold
-                  text-[#1B5CA8] dark:text-blue-400
+                  text-navy-600 dark:text-navy-300
                 "
               >
                 {product.price}
@@ -239,8 +239,8 @@ export default function ProductDetails() {
                     <Check
                       size={16}
                       className="
-                        text-green-600
-                        dark:text-green-400
+                        text-brand-600
+                        dark:text-brand-400
                         shrink-0
                       "
                     />
@@ -270,7 +270,7 @@ function Feature({ icon: Icon, title }) {
         border-gray-100 dark:border-gray-800
       "
     >
-      <Icon size={22} className="text-[#1B5CA8] dark:text-blue-400 shrink-0" />
+      <Icon size={22} className="text-navy-600 dark:text-navy-300 shrink-0" />
 
       <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
         {title}

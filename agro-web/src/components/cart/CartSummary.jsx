@@ -34,7 +34,7 @@ export default function CartSummary() {
       <div className="border-t border-gray-200 dark:border-gray-700 pt-4 mb-6">
         <div className="flex justify-between">
           <span className="font-bold text-gray-900 dark:text-white">Total</span>
-          <span className="text-xl font-bold text-[#1B5CA8] dark:text-blue-400">
+          <span className="text-xl font-bold text-navy-600 dark:text-navy-300">
             ৳{total.toFixed(2)}
           </span>
         </div>
@@ -42,7 +42,7 @@ export default function CartSummary() {
 
       <Link
         href="/checkout"
-        className="block w-full text-center px-6 py-3 bg-[#CC2229] hover:bg-[#9e1a1f] text-white font-semibold rounded-xl transition-colors"
+        className="block w-full text-center px-6 py-3 bg-gradient-brand hover:brightness-110 text-white font-semibold rounded-xl transition-colors"
       >
         Proceed to Checkout
       </Link>

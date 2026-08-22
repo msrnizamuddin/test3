@@ -69,7 +69,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="overflow-hidden bg-[#f7f9fc] px-4 py-20 md:py-24"
+      className="overflow-hidden bg-lime-50 px-4 py-20 md:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader
@@ -81,15 +81,15 @@ export default function Contact() {
         <div className="grid items-start gap-10 lg:grid-cols-5">
           {/* Contact Information */}
           <div className="lg:col-span-2">
-            <div className="rounded-3xl bg-gradient-to-br from-[#0D1C45] via-[#122b62] to-[#1B5CA8] p-8 text-white shadow-xl md:p-10">
+            <div className="rounded-3xl bg-gradient-to-br from-navy-900 via-navy-700 to-navy-500 p-8 text-white shadow-xl md:p-10">
               <div className="mb-8">
-                <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#CC2229]">
+                <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-brand">
                   <Mail size={21} />
                 </div>
 
                 <h3 className="mb-3 text-2xl font-black">Let&apos;s Talk</h3>
 
-                <p className="text-sm leading-relaxed text-blue-100">
+                <p className="text-sm leading-relaxed text-navy-100">
                   Whether you need help choosing the right seeds, fertilizer,
                   tools, or want expert agricultural advice, our team is here to
                   help.
@@ -99,12 +99,12 @@ export default function Contact() {
               <div className="space-y-5">
                 {contactInfo.map(({ icon: Icon, label, value }) => (
                   <div key={label} className="flex items-start gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-blue-200">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-navy-200">
                       <Icon size={19} />
                     </div>
 
                     <div>
-                      <div className="mb-0.5 text-[11px] font-semibold uppercase tracking-widest text-blue-300">
+                      <div className="mb-0.5 text-[11px] font-semibold uppercase tracking-widest text-sand-300">
                         {label}
                       </div>
 
@@ -121,7 +121,7 @@ export default function Contact() {
                   🌱 Need agricultural advice?
                 </div>
 
-                <p className="text-xs leading-relaxed text-blue-200">
+                <p className="text-xs leading-relaxed text-navy-200">
                   Our team can help you select suitable seeds, fertilizers and
                   farming solutions for your crop.
                 </p>
@@ -133,14 +133,14 @@ export default function Contact() {
           <div className="lg:col-span-3">
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="rounded-3xl border border-[#e8eef5] bg-white p-6 shadow-lg md:p-8"
+              className="rounded-3xl border border-sand-100 bg-white p-6 shadow-lg md:p-8"
             >
               <div className="mb-7">
-                <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-[#CC2229]">
+                <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-brand-600">
                   Send us a message
                 </p>
 
-                <h3 className="text-2xl font-black text-[#0D1C45]">
+                <h3 className="text-2xl font-black text-navy-700">
                   How Can We Help?
                 </h3>
               </div>
@@ -185,7 +185,7 @@ export default function Contact() {
                     className={`w-full resize-none rounded-xl border px-4 py-3 text-sm text-gray-800 outline-none transition-all placeholder:text-gray-400 focus:ring-2 ${
                       errors.message
                         ? "border-red-300 focus:border-red-400 focus:ring-red-100"
-                        : "border-gray-200 focus:border-[#1B5CA8] focus:ring-[#1B5CA8]/10"
+                        : "border-gray-200 focus:border-brand-500 focus:ring-brand-500/10"
                     }`}
                   />
 

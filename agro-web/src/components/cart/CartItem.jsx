@@ -22,7 +22,7 @@ export default function CartItem({ item }) {
           {item.cat}
         </p>
 
-        <p className="font-bold text-[#1B5CA8] dark:text-blue-400 mt-2">
+        <p className="font-bold text-navy-600 dark:text-navy-300 mt-2">
           {item.price}
         </p>
 

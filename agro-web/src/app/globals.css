@@ -6,23 +6,110 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #16210f;
   --surface: #ffffff;
-  --surface-muted: #f8fafc;
-  --border: #e5e7eb;
+  --surface-muted: #f8fbef;
+  --border: #e2e8c8;
+
+  /* Brand green — primary CTA / accent, derived from #B5E18B */
+  --brand-50: #f4fbe9;
+  --brand-100: #e7f6d1;
+  --brand-200: #d3edac;
+  --brand-300: #b5e18b;
+  --brand-400: #97ce68;
+  --brand-500: #79b64c;
+  --brand-600: #5c9638;
+  --brand-700: #47762c;
+  --brand-800: #385d24;
+  --brand-900: #2c481e;
+
+  /* Deep navy — secondary accent / dark surfaces, from #28396C */
+  --navy-50: #eef1f8;
+  --navy-100: #d3daec;
+  --navy-200: #a9b9da;
+  --navy-300: #7c94c2;
+  --navy-400: #566fa2;
+  --navy-500: #3d5384;
+  --navy-600: #28396c;
+  --navy-700: #202e59;
+  --navy-800: #182345;
+  --navy-900: #101731;
+
+  /* Warm sand / gold — highlights, badges, from #EAE6BC */
+  --sand-100: #f8f6e6;
+  --sand-200: #eae6bc;
+  --sand-300: #ddd39c;
+  --sand-400: #cdb96e;
+  --sand-500: #b99f47;
+  --sand-600: #96813a;
+
+  /* Pale lime — soft section tints, from #F0FFC2 */
+  --lime-50: #f8ffe6;
+  --lime-100: #f0ffc2;
+  --lime-200: #e0f79a;
+
+  --gradient-hero: linear-gradient(
+    135deg,
+    var(--navy-800) 0%,
+    var(--navy-600) 45%,
+    var(--brand-600) 100%
+  );
+  --gradient-brand: linear-gradient(
+    120deg,
+    var(--brand-500) 0%,
+    var(--brand-600) 100%
+  );
+  --gradient-fresh: linear-gradient(
+    135deg,
+    var(--lime-100) 0%,
+    var(--brand-200) 100%
+  );
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --surface: #111827;
-  --surface-muted: #0f172a;
-  --border: #1f2937;
+  --background: #0e1710;
+  --foreground: #eef3e2;
+  --surface: #16211a;
+  --surface-muted: #121c15;
+  --border: #26332a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+
+  --color-navy-50: var(--navy-50);
+  --color-navy-100: var(--navy-100);
+  --color-navy-200: var(--navy-200);
+  --color-navy-300: var(--navy-300);
+  --color-navy-400: var(--navy-400);
+  --color-navy-500: var(--navy-500);
+  --color-navy-600: var(--navy-600);
+  --color-navy-700: var(--navy-700);
+  --color-navy-800: var(--navy-800);
+  --color-navy-900: var(--navy-900);
+
+  --color-sand-100: var(--sand-100);
+  --color-sand-200: var(--sand-200);
+  --color-sand-300: var(--sand-300);
+  --color-sand-400: var(--sand-400);
+  --color-sand-500: var(--sand-500);
+  --color-sand-600: var(--sand-600);
+
+  --color-lime-50: var(--lime-50);
+  --color-lime-100: var(--lime-100);
+  --color-lime-200: var(--lime-200);
 
   --font-sans: "Noto Sans Bengali", var(--font-geist-sans), sans-serif;
   --font-mono: var(--font-geist-mono);
@@ -50,6 +137,26 @@ body {
 /* Prevent images from causing unexpected inline spacing */
 img {
   display: block;
+}
+
+/* Brand gradient utilities */
+.bg-gradient-hero {
+  background-image: var(--gradient-hero);
+}
+
+.bg-gradient-brand {
+  background-image: var(--gradient-brand);
+}
+
+.bg-gradient-fresh {
+  background-image: var(--gradient-fresh);
+}
+
+.text-gradient-brand {
+  background-image: var(--gradient-brand);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /* Hero animations */

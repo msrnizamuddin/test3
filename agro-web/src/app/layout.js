@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-screen bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100">
+      <body className="min-h-screen bg-white text-gray-900 dark:bg-navy-900 dark:text-gray-100">
         <ThemeProvider>
           <CartProvider>
             <TopBar />

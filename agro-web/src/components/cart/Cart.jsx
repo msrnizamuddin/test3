@@ -67,19 +67,19 @@ export default function CartPage() {
 
   if (!mounted) {
     return (
-      <main className="min-h-screen bg-white dark:bg-gray-950 transition-colors" />
+      <main className="min-h-screen bg-white dark:bg-navy-900 transition-colors" />
     );
   }
 
   if (cart.length === 0) {
     return (
-      <main className="min-h-screen bg-white dark:bg-gray-950 transition-colors">
+      <main className="min-h-screen bg-white dark:bg-navy-900 transition-colors">
         <section className="max-w-7xl mx-auto px-4 py-16 md:py-24">
           <div className="max-w-lg mx-auto text-center">
-            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-blue-50 dark:bg-blue-950/40 flex items-center justify-center">
+            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-navy-50 dark:bg-navy-900/40 flex items-center justify-center">
               <ShoppingBag
                 size={36}
-                className="text-[#1B5CA8] dark:text-blue-400"
+                className="text-navy-600 dark:text-navy-300"
               />
             </div>
 
@@ -93,7 +93,7 @@ export default function CartPage() {
 
             <Link
               href="/products"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#CC2229] hover:bg-[#9e1a1f] text-white font-semibold transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-brand hover:brightness-110 text-white font-semibold transition-colors"
             >
               <ShoppingBag size={18} />
               Browse Products
@@ -105,11 +105,11 @@ export default function CartPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gray-50 dark:bg-gray-950 transition-colors">
+    <main className="min-h-screen bg-lime-50 dark:bg-navy-900 transition-colors">
       <section className="max-w-7xl mx-auto px-4 py-8 md:py-12">
         <Link
           href="/products"
-          className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-[#CC2229] dark:hover:text-red-400 transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors mb-8"
         >
           <ArrowLeft size={18} />
           Continue Shopping
@@ -158,13 +158,13 @@ export default function CartPage() {
                   <div className="flex-1 min-w-0">
                     <div className="flex justify-between gap-4">
                       <div>
-                        <span className="text-xs font-semibold uppercase tracking-wider text-[#1B5CA8] dark:text-blue-400">
+                        <span className="text-xs font-semibold uppercase tracking-wider text-navy-600 dark:text-navy-300">
                           {item.cat}
                         </span>
 
                         <Link
                           href={`/products/${item.slug || item.name.toLowerCase().replace(/\s+/g, "-")}`}
-                          className="block mt-1 text-base md:text-lg font-semibold text-gray-900 dark:text-white hover:text-[#CC2229] dark:hover:text-red-400 transition-colors"
+                          className="block mt-1 text-base md:text-lg font-semibold text-gray-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
                         >
                           {item.name}
                         </Link>
@@ -180,7 +180,7 @@ export default function CartPage() {
                     </div>
 
                     <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
-                      <span className="font-bold text-[#1B5CA8] dark:text-blue-400">
+                      <span className="font-bold text-navy-600 dark:text-navy-300">
                         {item.price}
                       </span>
 
@@ -241,7 +241,7 @@ export default function CartPage() {
                   Total
                 </span>
 
-                <span className="text-xl font-bold text-[#1B5CA8] dark:text-blue-400">
+                <span className="text-xl font-bold text-navy-600 dark:text-navy-300">
                   ৳{total.toLocaleString()}
                 </span>
               </div>
@@ -249,7 +249,7 @@ export default function CartPage() {
 
             <Link
               href="#" //not yet made
-              className="mt-6 w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#CC2229] hover:bg-[#9e1a1f] text-white font-semibold transition-colors shadow-sm"
+              className="mt-6 w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-brand hover:brightness-110 text-white font-semibold transition-colors shadow-sm"
             >
               Proceed to Checkout
               <ArrowLeft size={18} className="rotate-180" />
@@ -257,7 +257,7 @@ export default function CartPage() {
 
             <Link
               href="/products"
-              className="mt-3 w-full flex items-center justify-center px-6 py-3 rounded-xl border-2 border-[#1B5CA8] text-[#1B5CA8] dark:text-blue-400 dark:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/40 font-semibold transition-colors"
+              className="mt-3 w-full flex items-center justify-center px-6 py-3 rounded-xl border-2 border-navy-600 text-navy-600 dark:text-navy-300 dark:border-navy-400 hover:bg-navy-50 dark:hover:bg-navy-900/40 font-semibold transition-colors"
             >
               Continue Shopping
             </Link>

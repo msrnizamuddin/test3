@@ -7,7 +7,7 @@ import { QUICK_LINKS, ABOUT } from "@/data/home";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0D1C45] text-blue-100 border-t border-blue-900">
+    <footer className="bg-navy-900 text-navy-100 border-t border-navy-700">
       <div className="max-w-7xl mx-auto px-4 pt-14 pb-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           {/* Company */}
@@ -18,30 +18,30 @@ export default function Footer() {
               className="h-10 w-auto object-contain brightness-0 invert mb-5"
             />
 
-            <p className="text-blue-200 text-sm leading-relaxed max-w-md mb-6">
+            <p className="text-navy-200 text-sm leading-relaxed max-w-md mb-6">
               Empowering Bangladeshi farmers with quality agro products, modern
               farming techniques, and reliable agricultural support since 2020.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3">
-              <div className="flex items-center gap-3 text-sm text-blue-200">
-                <Phone size={17} className="text-red-400 shrink-0" />
+              <div className="flex items-center gap-3 text-sm text-navy-200">
+                <Phone size={17} className="text-brand-400 shrink-0" />
                 <span>+880 1700-000000</span>
               </div>
 
-              <div className="flex items-center gap-3 text-sm text-blue-200">
-                <Mail size={17} className="text-red-400 shrink-0" />
+              <div className="flex items-center gap-3 text-sm text-navy-200">
+                <Mail size={17} className="text-brand-400 shrink-0" />
                 <span>info@aragro.com</span>
               </div>
 
-              <div className="flex items-center gap-3 text-sm text-blue-200">
-                <MapPin size={17} className="text-red-400 shrink-0" />
+              <div className="flex items-center gap-3 text-sm text-navy-200">
+                <MapPin size={17} className="text-brand-400 shrink-0" />
                 <span>Dhaka, Bangladesh</span>
               </div>
 
-              <div className="flex items-center gap-3 text-sm text-blue-200">
-                <Clock size={17} className="text-red-400 shrink-0" />
+              <div className="flex items-center gap-3 text-sm text-navy-200">
+                <Clock size={17} className="text-brand-400 shrink-0" />
                 <span>Sat–Thu, 9am–6pm</span>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-blue-300 text-sm hover:text-red-300 transition-colors"
+                    className="text-navy-300 text-sm hover:text-sand-300 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -74,7 +74,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-blue-300 text-sm hover:text-red-300 transition-colors"
+                    className="text-navy-300 text-sm hover:text-sand-300 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -85,9 +85,9 @@ export default function Footer() {
         </div>
 
         {/* Social Links */}
-        <div className="border-t border-blue-900 pt-6 mb-6">
+        <div className="border-t border-navy-700 pt-6 mb-6">
           <div className="flex items-center gap-3">
-            <span className="text-sm text-blue-300 mr-2">Follow us:</span>
+            <span className="text-sm text-navy-300 mr-2">Follow us:</span>
 
             <a
               href="#"
@@ -116,7 +116,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-blue-900 pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-blue-400">
+        <div className="border-t border-navy-700 pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-navy-300">
           <p>© 2024 Agro1 Global Agro Ltd. All rights reserved.</p>
 
           <p>Made with 🌱 for Bangladesh&apos;s farmers</p>

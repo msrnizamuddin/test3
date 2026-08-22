@@ -6,7 +6,7 @@ export default function ServiceCard({
   desc,
 }) {
   return (
-    <div className="group overflow-hidden rounded-2xl border border-[#1B5CA8]/40 bg-[#1B5CA8]/20 hover:border-[#CC2229] hover:bg-[#1B5CA8]/35 dark:border-blue-800/40 dark:bg-blue-950/30 dark:hover:border-red-500 dark:hover:bg-blue-900/30 transition-all duration-300">
+    <div className="group overflow-hidden rounded-2xl border border-navy-400/40 bg-navy-400/20 hover:border-brand-400 hover:bg-navy-400/35 dark:border-navy-600/40 dark:bg-navy-900/30 dark:hover:border-brand-500 dark:hover:bg-navy-800/40 transition-all duration-300">
       <div className="relative overflow-hidden h-44">
         <img
           src={img}
@@ -14,9 +14,9 @@ export default function ServiceCard({
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
 
-        <div className="absolute inset-0 bg-linear-to-t from-[#0D1C45]/80 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-navy-900/80 to-transparent" />
 
-        <div className="absolute top-3 right-3 w-10 h-10 rounded-xl bg-white/90 dark:bg-gray-900/90 flex items-center justify-center text-[#1B5CA8] dark:text-blue-400">
+        <div className="absolute top-3 right-3 w-10 h-10 rounded-xl bg-white/90 dark:bg-gray-900/90 flex items-center justify-center text-navy-600 dark:text-sand-400">
           <Icon size={22} />
         </div>
       </div>
@@ -24,11 +24,11 @@ export default function ServiceCard({
       <div className="p-4">
         <h3 className="font-bold text-white text-sm mb-0.5">{title}</h3>
 
-        <p className="text-red-300 dark:text-red-400 text-xs mb-2">
+        <p className="text-sand-300 dark:text-sand-400 text-xs mb-2">
           {subtitle}
         </p>
 
-        <p className="text-blue-200 dark:text-blue-300 text-xs leading-relaxed">
+        <p className="text-navy-200 dark:text-navy-100 text-xs leading-relaxed">
           {desc}
         </p>
       </div>

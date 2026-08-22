@@ -54,15 +54,15 @@ export default function Products() {
                   transition-all duration-200
                   ${
                     active
-                      ? "bg-[#1B5CA8] text-white shadow-md"
+                      ? "bg-gradient-brand text-white shadow-md"
                       : `
                         bg-surface-secondary
                         border border-border
                         text-gray-600 dark:text-gray-300
-                        hover:border-[#CC2229]
-                        hover:text-[#CC2229]
-                        dark:hover:border-red-400
-                        dark:hover:text-red-400
+                        hover:border-brand-500
+                        hover:text-brand-600
+                        dark:hover:border-brand-400
+                        dark:hover:text-brand-400
                       `
                   }
                 `}

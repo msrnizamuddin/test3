@@ -20,7 +20,7 @@ export default function EmptyCart() {
 
         <Link
           href="/products"
-          className="inline-block px-6 py-3 bg-[#1B5CA8] hover:bg-[#0d3d75] text-white font-semibold rounded-xl transition-colors"
+          className="inline-block px-6 py-3 bg-gradient-brand hover:brightness-110 text-white font-semibold rounded-xl transition-colors"
         >
           Browse Products
         </Link>

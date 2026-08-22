@@ -46,12 +46,12 @@ export default function ThemeToggle() {
       className="
         flex h-10 w-10 items-center justify-center
         rounded-full
-        bg-gray-100 text-[#0D1C45]
+        bg-sand-200/50 text-navy-700
         transition-all duration-200
-        hover:scale-105 hover:bg-[#e8f0fb]
-        dark:bg-gray-800
-        dark:text-yellow-300
-        dark:hover:bg-gray-700
+        hover:scale-105 hover:bg-sand-200
+        dark:bg-navy-800
+        dark:text-sand-400
+        dark:hover:bg-navy-700
       "
     >
       {dark ? <Sun size={19} /> : <Moon size={19} />}

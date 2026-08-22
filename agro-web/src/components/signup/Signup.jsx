@@ -7,7 +7,7 @@ import logoImg from "@/imports/home-logo.png";
 
 export default function Signup() {
   return (
-    <main className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center px-4 py-12 transition-colors">
+    <main className="min-h-screen bg-lime-50 dark:bg-navy-900 flex items-center justify-center px-4 py-12 transition-colors">
       <div className="w-full max-w-md">
         <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl shadow-xl p-8">
           <div className="flex justify-center mb-6">
@@ -44,7 +44,7 @@ export default function Signup() {
                   <input
                     type="text"
                     placeholder="First name"
-                    className="w-full pl-11 pr-3 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-[#1B5CA8] focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-950"
+                    className="w-full pl-11 pr-3 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100 dark:focus:ring-brand-900/40"
                   />
                 </div>
               </div>
@@ -57,7 +57,7 @@ export default function Signup() {
                 <input
                   type="text"
                   placeholder="Last name"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-[#1B5CA8] focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-950"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100 dark:focus:ring-brand-900/40"
                 />
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function Signup() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-[#1B5CA8] focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-950"
+                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100 dark:focus:ring-brand-900/40"
                 />
               </div>
             </div>
@@ -95,7 +95,7 @@ export default function Signup() {
                 <input
                   type="tel"
                   placeholder="Enter your phone number"
-                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-[#1B5CA8] focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-950"
+                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100 dark:focus:ring-brand-900/40"
                 />
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function Signup() {
                 <input
                   type="password"
                   placeholder="Create a password"
-                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-[#1B5CA8] focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-950"
+                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100 dark:focus:ring-brand-900/40"
                 />
               </div>
             </div>
@@ -133,19 +133,19 @@ export default function Signup() {
                 <input
                   type="password"
                   placeholder="Confirm your password"
-                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-[#1B5CA8] focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-950"
+                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100 dark:focus:ring-brand-900/40"
                 />
               </div>
             </div>
 
             <label className="flex items-start gap-3 text-sm text-gray-500 dark:text-gray-400 cursor-pointer">
-              <input type="checkbox" className="mt-1 accent-[#1B5CA8]" />
+              <input type="checkbox" className="mt-1 accent-brand-600" />
 
               <span>
                 I agree to the{" "}
                 <Link
                   href="#"
-                  className="text-[#1B5CA8] dark:text-blue-400 hover:text-[#CC2229]"
+                  className="text-navy-600 dark:text-navy-300 hover:text-brand-600"
                 >
                   Terms & Conditions
                 </Link>
@@ -154,7 +154,7 @@ export default function Signup() {
 
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#CC2229] hover:bg-[#9e1a1f] text-white font-semibold transition-colors shadow-sm"
+              className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-brand hover:brightness-110 text-white font-semibold transition-colors shadow-sm"
             >
               Create Account
               <ArrowRight size={18} />
@@ -173,7 +173,7 @@ export default function Signup() {
             Already have an account?{" "}
             <Link
               href="/login"
-              className="font-semibold text-[#1B5CA8] dark:text-blue-400 hover:text-[#CC2229] dark:hover:text-red-400"
+              className="font-semibold text-navy-600 dark:text-navy-300 hover:text-brand-600 dark:hover:text-brand-400"
             >
               Login
             </Link>
