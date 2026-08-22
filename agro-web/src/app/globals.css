@@ -188,3 +188,15 @@ img {
     transform: translateY(0);
   }
 }
+/* Hide scrollbars while keeping scrolling enabled */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.checkout-input {
+  @apply w-full rounded-xl border border-sand-100 bg-white px-3.5 py-2.5 text-sm text-gray-800 transition-colors focus:border-brand-600 focus:outline-none focus:ring-4 focus:ring-brand-600/10;
+}

@@ -3,8 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import { STATS } from "@/data/home";
 
-function useCountUp(target, active, duration = 1600) {
+function useCountUp(target, active, duration = 900) {
   const [count, setCount] = useState(0);
+  const rafRef = useRef(null);
 
   useEffect(() => {
     if (!active) return;
@@ -20,13 +21,17 @@ function useCountUp(target, active, duration = 1600) {
       setCount(value);
 
       if (progress < 1) {
-        requestAnimationFrame(animate);
+        rafRef.current = requestAnimationFrame(animate);
       } else {
         setCount(target);
       }
     };
 
-    requestAnimationFrame(animate);
+    rafRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
   }, [target, active, duration]);
 
   return count;
@@ -50,7 +55,8 @@ function StatItem({ stat }) {
         }
       },
       {
-        threshold: 0.4,
+        threshold: 0.1,
+        rootMargin: "0px 0px -10% 0px",
       },
     );
 

@@ -66,9 +66,7 @@ export default function CartPage() {
   const total = subtotal + delivery;
 
   if (!mounted) {
-    return (
-      <main className="min-h-screen bg-background transition-colors" />
-    );
+    return <main className="min-h-screen bg-background transition-colors" />;
   }
 
   if (cart.length === 0) {
@@ -248,7 +246,7 @@ export default function CartPage() {
             </div>
 
             <Link
-              href="#" //not yet made
+              href="/checkout" //not yet made
               className="mt-6 w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-brand hover:brightness-110 text-white font-semibold transition-colors shadow-sm"
             >
               Proceed to Checkout
