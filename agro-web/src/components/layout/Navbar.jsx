@@ -49,7 +49,7 @@ export default function Navbar() {
           : "border-border bg-background"
       }`}
     >
-      <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6">
+      <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link
           href="/home"
           className="flex shrink-0 items-center"
@@ -140,7 +140,7 @@ export default function Navbar() {
       <div
         className={`overflow-hidden transition-all duration-300 lg:hidden ${
           mobileMenuOpen
-            ? "max-h-[600px] border-t border-gray-200 opacity-100"
+            ? "max-h-150 border-t border-gray-200 opacity-100"
             : "max-h-0 opacity-0"
         }`}
       >

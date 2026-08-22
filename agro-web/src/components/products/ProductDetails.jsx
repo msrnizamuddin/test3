@@ -144,7 +144,7 @@ export default function ProductDetails() {
               <button
                 type="button"
                 onClick={handleAddToCart}
-                className={`flex min-w-[150px] items-center justify-center gap-2 rounded-xl border-2 px-5 py-3 text-sm font-semibold transition-all duration-300 ${
+                className={`flex min-w-37.5 items-center justify-center gap-2 rounded-xl border-2 px-5 py-3 text-sm font-semibold transition-all duration-300 ${
                   addedToCart
                     ? "scale-105 border-green-500 bg-green-500 text-white shadow-lg shadow-green-500/20"
                     : "border-navy-600 bg-transparent text-navy-600 hover:bg-navy-600 hover:text-white dark:border-navy-400 dark:text-navy-300 dark:hover:bg-navy-400 dark:hover:text-white"

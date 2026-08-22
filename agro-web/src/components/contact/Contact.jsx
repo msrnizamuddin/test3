@@ -81,7 +81,7 @@ export default function Contact() {
         <div className="grid items-start gap-10 lg:grid-cols-5">
           {/* Contact Information */}
           <div className="lg:col-span-2">
-            <div className="rounded-3xl bg-gradient-to-br from-navy-900 via-navy-700 to-navy-500 p-8 text-white shadow-xl md:p-10">
+            <div className="rounded-3xl bg-linear-to-br from-navy-900 via-navy-700 to-navy-500 p-8 text-white shadow-xl md:p-10">
               <div className="mb-8">
                 <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-brand">
                   <Mail size={21} />
