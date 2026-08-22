@@ -1,28 +1,47 @@
+"use client";
+
+import Link from "next/link";
+import { Mail, Phone } from "lucide-react";
+
 export default function TopBar() {
   return (
-    <div className="bg-[#0D1C45] text-white text-sm py-2 px-4 flex flex-wrap items-center justify-between gap-2">
-      <div className="flex items-center gap-4">
-        <span>📞 +880 1700-000000</span>
+    <div className="bg-[#8B1E2D] px-4 py-2 text-sm text-white">
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2">
+        <div className="flex items-center gap-4">
+          <a
+            href="tel:+8801700000000"
+            className="flex items-center gap-1.5 transition-colors hover:text-[#F4D35E]"
+          >
+            <Phone size={14} />
+            <span>+880 1700-000000</span>
+          </a>
 
-        <span className="hidden sm:inline">✉ info@aragro.com</span>
-      </div>
+          <a
+            href="mailto:info@aragro.com"
+            className="hidden items-center gap-1.5 transition-colors hover:text-[#F4D35E] sm:flex"
+          >
+            <Mail size={14} />
+            <span>info@aragro.com</span>
+          </a>
+        </div>
 
-      <div className="flex items-center gap-3">
-        <a href="#" className="hover:text-red-300 transition-colors">
-          Facebook
-        </a>
+        <div className="flex items-center gap-3">
+          <Link href="#" className="transition-colors hover:text-[#F4D35E]">
+            Facebook
+          </Link>
 
-        <span className="opacity-40">|</span>
+          <span className="text-white/40">|</span>
 
-        <a href="#" className="hover:text-red-300 transition-colors">
-          YouTube
-        </a>
+          <Link href="#" className="transition-colors hover:text-[#F4D35E]">
+            YouTube
+          </Link>
 
-        <span className="opacity-40">|</span>
+          <span className="text-white/40">|</span>
 
-        <a href="#" className="hover:text-red-300 transition-colors">
-          Hotline: 16XXX
-        </a>
+          <Link href="#" className="transition-colors hover:text-[#F4D35E]">
+            Hotline: 16XXX
+          </Link>
+        </div>
       </div>
     </div>
   );

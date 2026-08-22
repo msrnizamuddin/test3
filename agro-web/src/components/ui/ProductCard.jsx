@@ -1,34 +1,36 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ShoppingCart, Zap } from "lucide-react";
 
 export default function ProductCard({
   name,
+  slug,
   cat,
   price,
   img,
   onBuy,
   onAddToCart,
 }) {
-  const slug = name.toLowerCase().replace(/\s+/g, "-");
-
   const product = {
     name,
+    slug,
     cat,
     price,
     img,
-    slug,
   };
 
   return (
     <div className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-green-200 dark:hover:border-green-900 transition-all duration-300">
       <Link href={`/products/${slug}`} className="block">
         <div className="relative overflow-hidden h-44 bg-green-50 dark:bg-green-950/30">
-          <img
+          <Image
             src={img}
             alt={name}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            fill
+            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
 
           <span className="absolute top-2 right-2 text-white text-xs font-bold px-2 py-0.5 rounded-full bg-[#CC2229]">

@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import TopBar from "@/components/layout/TopBar";
 import "@fontsource-variable/noto-sans-bengali";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100">
         <ThemeProvider>
           <CartProvider>
+            <TopBar />
             <Navbar />
             {children}
             <Footer />

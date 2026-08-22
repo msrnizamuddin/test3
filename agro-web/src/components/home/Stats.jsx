@@ -1,20 +1,123 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import { STATS } from "@/data/home";
+
+function useCountUp(target, active, duration = 1600) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!active) return;
+
+    const startTime = performance.now();
+
+    const animate = (currentTime) => {
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const value = Math.floor(eased * target);
+
+      setCount(value);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        setCount(target);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [target, active, duration]);
+
+  return count;
+}
+
+function StatItem({ stat }) {
+  const ref = useRef(null);
+  const [active, setActive] = useState(false);
+
+  const count = useCountUp(stat.value, active);
+  const Icon = stat.icon;
+
+  useEffect(() => {
+    if (!ref.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setActive(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.4,
+      },
+    );
+
+    observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className="group relative flex flex-col items-center px-5 py-10 text-center md:py-12"
+    >
+      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-[#F4D35E] transition-all duration-300 group-hover:scale-110 group-hover:bg-[#F4D35E]/15">
+        {Icon && <Icon size={24} strokeWidth={1.8} />}
+      </div>
+
+      <div className="text-3xl font-black tracking-tight text-white md:text-4xl">
+        {count.toLocaleString()}
+        <span className="ml-0.5 text-[#E63946]">+</span>
+      </div>
+
+      <div className="mt-2 text-xs font-semibold uppercase tracking-[0.15em] text-white/70 md:text-sm">
+        {stat.label}
+      </div>
+
+      <div className="mt-5 h-1 w-8 rounded-full bg-[#F4D35E] transition-all duration-300 group-hover:w-14" />
+    </div>
+  );
+}
 
 export default function Stats() {
   return (
-    <section className="bg-[#1B5CA8] text-white">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-blue-500">
-          {STATS.map(({ label, value, icon: Icon }) => (
+    <section className="relative overflow-hidden bg-[#8B1E2D] text-white">
+      <div className="pointer-events-none absolute inset-0">
+        <div
+          className="absolute -left-40 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full opacity-25 blur-3xl"
+          style={{
+            background: "radial-gradient(circle, #457B9D 0%, transparent 70%)",
+          }}
+        />
+
+        <div
+          className="absolute -right-40 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full opacity-20 blur-3xl"
+          style={{
+            background: "radial-gradient(circle, #E63946 0%, transparent 70%)",
+          }}
+        />
+
+        <div
+          className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-10 blur-3xl"
+          style={{
+            background: "radial-gradient(circle, #F4D35E 0%, transparent 70%)",
+          }}
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-4">
+        <div className="grid grid-cols-2 md:grid-cols-4">
+          {STATS.map((stat, index) => (
             <div
-              key={label}
-              className="flex flex-col items-center py-6 px-4 text-center"
+              key={stat.label}
+              className={`${index !== 0 ? "border-l border-white/10" : ""} ${
+                index >= 2 ? "border-t border-white/10 md:border-t-0" : ""
+              }`}
             >
-              <Icon size={26} className="mb-2" />
-
-              <span className="text-2xl font-bold text-red-300">{value}</span>
-
-              <span className="text-sm text-blue-200 mt-0.5">{label}</span>
+              <StatItem stat={stat} />
             </div>
           ))}
         </div>

@@ -140,14 +140,14 @@ export const PRODUCTS = [
   },
   {
     name: "Organic Compost Fertilizer",
-    name: "organic-compost-fertilizer",
+    slug: "organic-compost-fertilizer",
     cat: "Fertilizer",
     price: "৳ 420",
     img: "https://images.unsplash.com/photo-1533321942807-08e4008b2025?w=400&h=300&fit=crop&auto=format",
   },
   {
     name: "Pesticide Spray (1L)",
-    name: "pesticide-spray-1l",
+    slug: "pesticide-spray-1l",
     cat: "Pesticides",
     price: "৳ 350",
     img: "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=400&h=300&fit=crop&auto=format",
@@ -161,7 +161,7 @@ export const PRODUCTS = [
   },
   {
     name: "Lettuce Seedlings",
-    name: "lettuce-seedlings",
+    slug: "lettuce-seedlings",
     cat: "Seedlings",
     price: "৳ 45",
     img: "https://images.unsplash.com/photo-1708796705570-33fd29ef67d0?w=400&h=300&fit=crop&auto=format",

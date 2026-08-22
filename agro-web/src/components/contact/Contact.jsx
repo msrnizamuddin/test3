@@ -3,8 +3,11 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { Mail, MapPin, Phone, Clock } from "lucide-react";
+import { Mail, MapPin, Phone, Clock, ArrowRight } from "lucide-react";
+
 import FormField from "@/components/ui/FormField";
+import Button from "@/components/common/Button";
+import SectionHeader from "@/components/common/SectionHeader";
 
 const contactSchema = yup.object({
   name: yup
@@ -64,101 +67,150 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-4">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-        <div>
-          <span className="font-semibold text-sm uppercase tracking-widest text-[#CC2229]">
-            যোগাযোগ করুন
-          </span>
+    <section
+      id="contact"
+      className="overflow-hidden bg-[#f7f9fc] px-4 py-20 md:py-24"
+    >
+      <div className="mx-auto max-w-7xl">
+        <SectionHeader
+          eyebrow="যোগাযোগ করুন"
+          title="Get In Touch"
+          description="Have questions about our products or services? Our agricultural experts are ready to help you grow better."
+        />
 
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
-            Get In Touch
-          </h2>
-
-          <p className="text-gray-600 mb-8">
-            Have questions about our products or services? Our agricultural
-            experts are ready to help you grow better.
-          </p>
-
-          <div className="space-y-5">
-            {contactInfo.map(({ icon: Icon, label, value }) => (
-              <div key={label} className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-[#e8f0fb] text-[#1B5CA8]">
-                  <Icon size={20} />
+        <div className="grid items-start gap-10 lg:grid-cols-5">
+          {/* Contact Information */}
+          <div className="lg:col-span-2">
+            <div className="rounded-3xl bg-gradient-to-br from-[#0D1C45] via-[#122b62] to-[#1B5CA8] p-8 text-white shadow-xl md:p-10">
+              <div className="mb-8">
+                <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#CC2229]">
+                  <Mail size={21} />
                 </div>
 
-                <div>
-                  <div className="text-xs text-gray-400 font-medium uppercase tracking-wide">
-                    {label}
-                  </div>
+                <h3 className="mb-3 text-2xl font-black">Let&apos;s Talk</h3>
 
-                  <div className="text-gray-800 font-medium">{value}</div>
+                <p className="text-sm leading-relaxed text-blue-100">
+                  Whether you need help choosing the right seeds, fertilizer,
+                  tools, or want expert agricultural advice, our team is here to
+                  help.
+                </p>
+              </div>
+
+              <div className="space-y-5">
+                {contactInfo.map(({ icon: Icon, label, value }) => (
+                  <div key={label} className="flex items-start gap-4">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-blue-200">
+                      <Icon size={19} />
+                    </div>
+
+                    <div>
+                      <div className="mb-0.5 text-[11px] font-semibold uppercase tracking-widest text-blue-300">
+                        {label}
+                      </div>
+
+                      <div className="text-sm font-medium text-white">
+                        {value}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-5">
+                <div className="mb-1 text-sm font-bold text-white">
+                  🌱 Need agricultural advice?
+                </div>
+
+                <p className="text-xs leading-relaxed text-blue-200">
+                  Our team can help you select suitable seeds, fertilizers and
+                  farming solutions for your crop.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Form */}
+          <div className="lg:col-span-3">
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="rounded-3xl border border-[#e8eef5] bg-white p-6 shadow-lg md:p-8"
+            >
+              <div className="mb-7">
+                <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-[#CC2229]">
+                  Send us a message
+                </p>
+
+                <h3 className="text-2xl font-black text-[#0D1C45]">
+                  How Can We Help?
+                </h3>
+              </div>
+
+              <div className="space-y-5">
+                {/* Name + Phone */}
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <FormField
+                    label="Name"
+                    placeholder="Your name"
+                    error={errors.name?.message}
+                    {...register("name")}
+                  />
+
+                  <FormField
+                    label="Phone"
+                    placeholder="+880..."
+                    error={errors.phone?.message}
+                    {...register("phone")}
+                  />
+                </div>
+
+                {/* Email */}
+                <FormField
+                  label="Email"
+                  type="email"
+                  placeholder="you@example.com"
+                  error={errors.email?.message}
+                  {...register("email")}
+                />
+
+                {/* Message */}
+                <div>
+                  <label className="mb-1.5 block text-xs font-medium text-gray-500">
+                    Message
+                  </label>
+
+                  <textarea
+                    rows={5}
+                    placeholder="Tell us about your farming needs..."
+                    {...register("message")}
+                    className={`w-full resize-none rounded-xl border px-4 py-3 text-sm text-gray-800 outline-none transition-all placeholder:text-gray-400 focus:ring-2 ${
+                      errors.message
+                        ? "border-red-300 focus:border-red-400 focus:ring-red-100"
+                        : "border-gray-200 focus:border-[#1B5CA8] focus:ring-[#1B5CA8]/10"
+                    }`}
+                  />
+
+                  {errors.message && (
+                    <p className="mt-1 text-xs text-red-500">
+                      {errors.message.message}
+                    </p>
+                  )}
+                </div>
+
+                {/* Submit */}
+                <div className="pt-2">
+                  <Button
+                    type="submit"
+                    variant="primary"
+                    className="w-full sm:w-auto"
+                  >
+                    Send Message
+                    <ArrowRight size={17} className="ml-2" />
+                  </Button>
                 </div>
               </div>
-            ))}
+            </form>
           </div>
         </div>
-
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
-        >
-          <h3 className="font-bold text-gray-900 text-xl mb-6">
-            Send a Message
-          </h3>
-
-          <div className="space-y-4">
-            <div className="grid grid-cols-2 gap-4">
-              <FormField
-                label="Name"
-                placeholder="Your name"
-                error={errors.name?.message}
-                {...register("name")}
-              />
-
-              <FormField
-                label="Phone"
-                placeholder="+880..."
-                error={errors.phone?.message}
-                {...register("phone")}
-              />
-            </div>
-
-            <FormField
-              label="Email"
-              type="email"
-              placeholder="you@example.com"
-              error={errors.email?.message}
-              {...register("email")}
-            />
-
-            <div>
-              <label className="block text-xs font-medium text-gray-500 mb-1.5">
-                Message
-              </label>
-
-              <textarea
-                rows={4}
-                placeholder="Tell us about your farming needs..."
-                {...register("message")}
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-100 resize-none"
-              />
-
-              {errors.message && (
-                <p className="text-red-500 text-xs mt-1">
-                  {errors.message.message}
-                </p>
-              )}
-            </div>
-
-            <button
-              type="submit"
-              className="w-full py-3 bg-[#CC2229] hover:bg-[#9e1a1f] text-white font-semibold rounded-xl transition-colors shadow-md"
-            >
-              Send Message
-            </button>
-          </div>
-        </form>
       </div>
     </section>
   );
