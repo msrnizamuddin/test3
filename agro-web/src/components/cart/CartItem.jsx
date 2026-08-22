@@ -49,7 +49,7 @@ export default function CartItem({ item }) {
 
           <button
             onClick={() => removeFromCart(item.name)}
-            className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-950/30 rounded-lg"
+            className="p-2 text-gray-400 hover:text-navy-700 hover:bg-brand-50 dark:hover:bg-brand-900/30 rounded-lg transition-colors"
           >
             <Trash2 size={18} />
           </button>

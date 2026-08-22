@@ -17,7 +17,9 @@ const FormField = forwardRef(function FormField(
       />
 
       {error && (
-        <p className="text-red-500 dark:text-red-400 text-xs mt-1">{error}</p>
+        <p className="text-navy-700 dark:text-navy-400 text-xs mt-1 font-medium">
+          {error}
+        </p>
       )}
     </div>
   );

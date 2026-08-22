@@ -129,7 +129,7 @@ export default function CartPage() {
 
           <button
             onClick={clearCart}
-            className="text-sm font-medium text-red-500 hover:text-red-700 dark:hover:text-red-400 transition-colors"
+            className="text-sm font-medium text-gray-500 hover:text-navy-700 dark:hover:text-navy-400 transition-colors"
           >
             Clear Cart
           </button>
@@ -172,7 +172,7 @@ export default function CartPage() {
 
                       <button
                         onClick={() => removeItem(item.name)}
-                        className="shrink-0 p-2 rounded-lg text-gray-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-950/30 transition-colors"
+                        className="shrink-0 p-2 rounded-lg text-gray-400 hover:text-navy-700 hover:bg-brand-50 dark:hover:bg-brand-900/30 transition-colors"
                         aria-label={`Remove ${item.name}`}
                       >
                         <Trash2 size={18} />

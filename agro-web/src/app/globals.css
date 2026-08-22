@@ -5,55 +5,55 @@
 @import "@fontsource-variable/noto-sans-bengali";
 
 :root {
-  --background: #fff7eb;
-  --foreground: #241019;
+  --background: #ffffff;
+  --foreground: #14263d;
   --surface: #ffffff;
-  --surface-muted: #f9f0e0;
-  --muted-foreground: #7a6a58;
-  --border: #ecdfc8;
+  --surface-muted: #eef6fc;
+  --muted-foreground: #5b7690;
+  --border: #d6e6f3;
 
-  /* Olive-sage green — primary CTA / accent, derived from #A2AB73 */
-  --brand-50: #f6f7f0;
-  --brand-100: #e9ecda;
-  --brand-200: #d4d9b4;
-  --brand-300: #bdc492;
-  --brand-400: #a2ab73;
-  --brand-500: #8b9461;
-  --brand-600: #737c4e;
-  --brand-700: #5c633e;
-  --brand-800: #474c30;
-  --brand-900: #363a25;
+  /* Primary blue — CTAs / links, anchored on the logo blue #0F6BB8 */
+  --brand-50: #eef7fd;
+  --brand-100: #d9edfb;
+  --brand-200: #b3daf7;
+  --brand-300: #82c0ef;
+  --brand-400: #4da3e3;
+  --brand-500: #2288d4;
+  --brand-600: #0f6bb8;
+  --brand-700: #0c5695;
+  --brand-800: #0a4374;
+  --brand-900: #08334f;
 
-  /* Deep raspberry — secondary accent / dark surfaces, from #CC3A63 */
-  --navy-50: #fdeef2;
-  --navy-100: #f8cfd9;
-  --navy-200: #f0a3b8;
-  --navy-300: #e67997;
-  --navy-400: #da5a80;
-  --navy-500: #d24971;
-  --navy-600: #cc3a63;
-  --navy-700: #a62f51;
-  --navy-800: #7d2440;
-  --navy-900: #4a1526;
+  /* Deep navy blue — headers / dark bands, same hue family, darker */
+  --navy-50: #eaf1fb;
+  --navy-100: #cfe0f5;
+  --navy-200: #9fc0ec;
+  --navy-300: #6ea0e2;
+  --navy-400: #4580d1;
+  --navy-500: #2c65b3;
+  --navy-600: #1d4e8f;
+  --navy-700: #163d70;
+  --navy-800: #102d54;
+  --navy-900: #0b1f3a;
 
-  /* Rose highlight — badges, dark-mode accents, from #CC3A63 */
-  --sand-100: #fdeef2;
-  --sand-200: #f8cfd9;
-  --sand-300: #f0a3b8;
-  --sand-400: #e67997;
-  --sand-500: #da5a80;
-  --sand-600: #cc3a63;
+  /* Sky-blue highlight — badges, accents on dark bands */
+  --sand-100: #eef7fd;
+  --sand-200: #d9edfb;
+  --sand-300: #b3daf7;
+  --sand-400: #82c0ef;
+  --sand-500: #4da3e3;
+  --sand-600: #2288d4;
 
-  /* Warm cream — soft section tints, from #FFF7EB / #F9F0E0 */
-  --lime-50: #fffdf8;
-  --lime-100: #fff7eb;
-  --lime-200: #f9f0e0;
+  /* Near-white blue tint — soft section backgrounds */
+  --lime-50: #ffffff;
+  --lime-100: #ffffff;
+  --lime-200: #eef6fc;
 
   --gradient-hero: linear-gradient(
     135deg,
     var(--navy-800) 0%,
     var(--navy-600) 45%,
-    var(--brand-600) 100%
+    var(--brand-500) 100%
   );
   --gradient-brand: linear-gradient(
     120deg,
@@ -63,17 +63,17 @@
   --gradient-fresh: linear-gradient(
     135deg,
     var(--lime-100) 0%,
-    var(--brand-200) 100%
+    var(--brand-100) 100%
   );
 }
 
 .dark {
-  --background: #200a13;
-  --foreground: #fff7eb;
-  --surface: #2c0f1c;
-  --surface-muted: #240c17;
-  --muted-foreground: #c9a8b6;
-  --border: #4a1f30;
+  --background: #ffffff;
+  --foreground: #14263d;
+  --surface: #ffffff;
+  --surface-muted: #eef6fc;
+  --muted-foreground: #5b7690;
+  --border: #d6e6f3;
 }
 
 @theme inline {

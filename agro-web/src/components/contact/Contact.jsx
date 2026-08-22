@@ -184,13 +184,13 @@ export default function Contact() {
                     {...register("message")}
                     className={`w-full resize-none rounded-xl border px-4 py-3 text-sm text-gray-800 outline-none transition-all placeholder:text-gray-400 focus:ring-2 ${
                       errors.message
-                        ? "border-red-300 focus:border-red-400 focus:ring-red-100"
+                        ? "border-navy-400 focus:border-navy-500 focus:ring-navy-100"
                         : "border-gray-200 focus:border-brand-500 focus:ring-brand-500/10"
                     }`}
                   />
 
                   {errors.message && (
-                    <p className="mt-1 text-xs text-red-500">
+                    <p className="mt-1 text-xs text-navy-700 font-medium">
                       {errors.message.message}
                     </p>
                   )}
